@@ -1,8 +1,18 @@
 /* Font import */
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Work+Sans:wght@400;600&display=swap');
 
-/* Styles import */
+
+/* Libraries import */
 @import "./libraries/normalize.css";
+
+/* Utils import */
 @import "./utils/variables.css";
+@import "./utils/headings.css";
+
+/* Styles import */
 @import "./base/main.css";
 @import "./base/media.css";
+
+/* Components import */
+
+/* Layout import */
