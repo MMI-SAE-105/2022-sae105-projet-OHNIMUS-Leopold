@@ -1,0 +1,25 @@
+:root {
+    /* Color styles */
+--jaune: #F5F1D2;
+--noir-nuit: #030C3B;
+--blanc-cassé: #F3F3F3;
+--saumon: #FFBCC1;
+--bleu: #95DDFF;
+    
+
+/* Text-size styles */
+--logo: 40px;
+--heading1: 32px;
+--heading2: 28px;
+--body: 16px;
+--small-text: 12px;
+--button: 16px;
+
+/* Text-weight styles */
+--regular: 400;
+--semi-bold: 600;
+
+/* Typographies */
+--handwritten: 'Caveat', sans-serif;
+--sans-serif: 'Work Sans', sans-serif;
+}

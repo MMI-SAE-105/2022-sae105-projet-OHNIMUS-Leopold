@@ -1,0 +1,8 @@
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Work+Sans:wght@400;600&display=swap');
+
+/* Styles import */
+@import "./libraries/normalize.css";
+@import "./utils/variables.css";
+@import "./base/main.css";
+@import "./base/media.css";
