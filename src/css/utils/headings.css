@@ -24,15 +24,7 @@ p {
     margin: 0;
 }
 
-.logo {
-    font-family: var(--handwritten);
-    font-size: var(--logo);
-    font-weight: var(--regular);
-    color: var(--blanc-casse);
-    margin: 0;
-}
-
-.small-text {
+/* .small-text {
     font-family: var(--sans-serif);
     font-size: var(--small-text);
     font-weight: var(--regular);
@@ -46,4 +38,4 @@ p {
     font-weight: var(--semi-bold);
     color: var(--noir-nuit);
     margin: 0;
-}
+} */

@@ -13,6 +13,8 @@
 @import "./base/main.css";
 @import "./base/media.css";
 
-/* Components import */
-
 /* Layout import */
+@import "./layout/header.css";
+
+/* Components import */
+@import "./components/menu.css";
