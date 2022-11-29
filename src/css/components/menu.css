@@ -5,6 +5,7 @@
 .menu__icon {
     /* vertical-align:middle; */
     margin-top: 40px;
+    cursor: pointer;
 }
 
 .menu__open {
@@ -36,6 +37,7 @@
     height: 27px;
     padding-left: 9px;
     padding-right: 9px;
+    cursor: pointer;
 }
 
 .menu__title {
@@ -50,6 +52,7 @@
 
 .menu__close {
     height: 46px;
+    cursor: pointer;
 }
 
 .menu__bar {
@@ -73,6 +76,7 @@
     padding: 0;
     text-align: center;
     margin-bottom: 30px;
+    cursor: pointer;
 }
 
 /* .section__un {

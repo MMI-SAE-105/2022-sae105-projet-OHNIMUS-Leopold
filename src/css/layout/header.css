@@ -8,6 +8,7 @@
 .header__logo {
     height: 80px;
     margin-top: 17px;
+    cursor: pointer;
 }
 
 .header__title {
