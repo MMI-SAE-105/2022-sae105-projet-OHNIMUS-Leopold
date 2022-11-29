@@ -30,7 +30,7 @@
                 <span class="menu__bar"></span>
                 
                 <nav class="menu__nav">
-                    <ul class="menu__section" @click="articlesAreOpen = ! articlesAreOpen">Mes articles
+                    <ul class="menu__section" @click="articlesAreOpen = ! articlesAreOpen; othersAreOpen = false">Mes articles
                         <div class="menu__list" x-show="articlesAreOpen" x-transition.duration.200ms>
                             <li class="menu__item">
                                 <img class="menu__bullet" src="./public/icons/carrousel/chevron-right.svg" alt="puce">
@@ -62,7 +62,7 @@
                             </li>
                         </div>
                     </ul>
-                    <ul class="menu__section" @click="othersAreOpen = ! othersAreOpen">Voir plus
+                    <ul class="menu__section" @click="othersAreOpen = ! othersAreOpen; articlesAreOpen = false">Voir plus
                         <div class="menu__list" x-show="othersAreOpen" x-transition.duration.200ms>
                             <li class="menu__item">
                                 <img class="menu__bullet" src="./public/icons/carrousel/chevron-right.svg" alt="puce">
