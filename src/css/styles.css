@@ -15,6 +15,7 @@
 
 /* Layout import */
 @import "./layout/header.css";
+@import "./layout/footer.css";
 
 /* Components import */
 @import "./components/menu.css";
