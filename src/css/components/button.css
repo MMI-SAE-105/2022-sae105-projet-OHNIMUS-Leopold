@@ -1,0 +1,11 @@
+.button {
+    font-family: var(--sans-serif);
+    font-size: var(--button);
+    font-weight: var(--semi-bold);
+    color: var(--blanc-casse);
+    background-color: var(--noir-nuit);
+    border: 1px solid var(--blanc-casse);
+    border-radius: 10px;
+    padding: 8px 18px 8px 18px;
+    text-decoration: none;
+}
