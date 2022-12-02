@@ -1,7 +1,7 @@
-- NOM : 
-- PRÉNOM :
-- URL du site :
-- URL FIGMA :
+- NOM : OHNIMUS
+- PRÉNOM : Léopold
+- URL du site : https://dapper-taiyaki-0e6b67.netlify.app (provisoire)
+- URL FIGMA : https://www.figma.com/file/9cyqmICslBXaKZIcQ4vZRq/Maquettes-projet-individuel-%E2%80%94-L%C3%A9opold-OHNIMUS?node-id=0%3A1&t=Jp7Cme1MtGvFeZbR-1
 
 # Structure de départ pour le projet individuel.
 
