@@ -44,7 +44,7 @@
 
 
 .slider {
-    width: 375px;
+    width: 100vw;
     height: 189px;
     overflow: hidden;
     margin: 30px auto 30px auto;
