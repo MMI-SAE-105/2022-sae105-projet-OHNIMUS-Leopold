@@ -19,5 +19,7 @@
     font-size: var(--logo);
     font-weight: var(--regular);
     color: var(--blanc-casse);
-    margin: 37px 22px 0 6px;
+    /* margin: 37px 22px 0 6px; */
+    margin: 37px 0 0 -10px;
+    text-align: center;
 }
