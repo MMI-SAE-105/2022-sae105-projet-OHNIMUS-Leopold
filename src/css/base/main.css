@@ -9,3 +9,20 @@ body {
 .home__slider {
 
 } */
+
+.home__title {
+    margin: 0 46px 0 46px;
+    text-align: center;
+}
+
+.articles {
+    margin-top: 30px;
+}
+
+.articles__title {
+    text-align: center;
+}
+
+/* .articles__carrousel {
+
+} */
