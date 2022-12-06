@@ -1,6 +1,7 @@
-/* .carrousel {
-
-} */
+.carrousel {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 
 .carrousel__button {
     background-color: unset;
@@ -21,15 +22,15 @@
 .carrousel__button--prv {
     left: 0;
     background: linear-gradient(90deg, rgb(245,241,210) 0%, rgb(245,241,210,0) 100%);
-    padding-left: 15px;
-    padding-right: 36px;
+    padding-left: 20px;
+    padding-right: 46px;
 }
 
 .carrousel__button--nxt {
     right: 0;
     background: linear-gradient(90deg, rgb(245,241,210,0) 0%, rgb(245,241,210) 100%);
-    padding-left: 36px;
-    padding-right: 15px;
+    padding-left: 46px;
+    padding-right: 20px;
 }
 
 .carrousel__button--img{
@@ -69,9 +70,25 @@
     scroll-behavior: smooth; 
     scroll-snap-type: x mandatory;
     overflow: hidden;
-
 }
 
 /* .carrousel__card {
 
 } */
+
+.carrousel__dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    /* align-content: space-between; */
+    gap: 6px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: var(--jaune);
+    border: 1px solid var(--noir-nuit);
+    border-radius: 50%;
+    display: inline-block; 
+}
