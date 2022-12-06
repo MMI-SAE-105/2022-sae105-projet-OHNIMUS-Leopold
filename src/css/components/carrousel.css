@@ -54,7 +54,8 @@
     }
 
     .carrousel__button {
-        padding: 185px 0 230px 0;
+        padding-top: 185px;
+        padding-bottom: 230px;
     }
     
 }
@@ -62,7 +63,13 @@
 .carrousel__track {
     display: flex;
     /* transform: translateX(); */
-    overflow: hidden;
+    padding-left: 80px;
+    padding-right: 80px;
+    overflow-x: scroll; 
+    scroll-behavior: smooth; 
+    scroll-snap-type: x mandatory;
+    /* overflow: hidden; */
+
 }
 
 /* .carrousel__card {
