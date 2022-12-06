@@ -116,12 +116,12 @@
         <h1 class="articles__title">Les articles</h1>
         <div class="articles__carrousel carrousel">
             
-                <button class="carrousel__button carrousel__button--prv"><img class="carrousel__button--img" src="./public/icons/carrousel/chevron-left.svg" alt="article précédent"></button>
-                <button class="carrousel__button carrousel__button--nxt"><img class="carrousel__button--img" src="./public/icons/carrousel/chevron-right.svg" alt="article suivant"></button>
+                <button class="carrousel__button carrousel__button--prv"><img @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" class="carrousel__button--img" src="./public/icons/carrousel/chevron-left.svg" alt="article précédent"></button>
+                <button class="carrousel__button carrousel__button--nxt"><img @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" class="carrousel__button--img" src="./public/icons/carrousel/chevron-right.svg" alt="article suivant"></button>
             
-            <div class="carrousel__track">
+            <div class="carrousel__track" x-ref="parent">
                 
-                    <div class="carrousel__card card card--red">
+                    <div id="card-1" class="carrousel__card card card--red">
                         <img class="card__img" src="./public/img/home/place.webp" alt="article lieu">
                         <div class="card__caption caption">
                             <h2 class="caption__title">Un lieu</h2>
@@ -131,7 +131,7 @@
                     </div>
                 
                 
-                    <div class="carrousel__card card card--white">
+                    <div id="card-2" class="carrousel__card card card--white">
                         <img class="card__img" src="./public/img/home/book.webp" alt="article livre">
                         <div class="card__caption caption">
                             <h2 class="caption__title">Un livre</h2>
@@ -141,7 +141,7 @@
                     </div>
                 
                 
-                    <div class="carrousel__card card card--black">
+                    <div id="card-3" class="carrousel__card card card--black">
                         <img class="card__img" src="./public/img/home/hope.webp" alt="article espoir">
                         <div class="card__caption caption">
                             <h2 class="caption__title">Un espoir</h2>
@@ -151,7 +151,7 @@
                     </div>
                 
                 
-                    <div class="carrousel__card card card--red">
+                    <div id="card-4" class="carrousel__card card card--red">
                         <img class="card__img" src="./public/img/home/series.webp" alt="article série">
                         <div class="card__caption caption">
                             <h2 class="caption__title">Une série</h2>
@@ -161,7 +161,7 @@
                     </div>
                 
                 
-                    <div class="carrousel__card card card--yellow">
+                    <div id="card-5" class="carrousel__card card card--yellow">
                         <img class="card__img" src="./public/img/home/music.webp" alt="article musique">
                         <div class="card__caption caption">
                             <h2 class="caption__title">Une musique</h2>
@@ -171,7 +171,7 @@
                     </div>
                 
                 
-                    <div class="carrousel__card card card--blue">
+                    <div id="card-6" class="carrousel__card card card--blue">
                         <img class="card__img" src="./public/img/home/regret.webp" alt="article regret">
                         <div class="card__caption caption">
                             <h2 class="caption__title">Un regret</h2>
