@@ -115,11 +115,12 @@
     <section class="articles">
         <h1 class="articles__title">Les articles</h1>
         
-        <div class="articles__carrousel carrousel">
+        <div class="articles__carrousel carrousel" x-data="{hrefCourant: '#card-1',}">
             <button class="carrousel__button carrousel__button--prv"><img @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" class="carrousel__button--img" src="./public/icons/carrousel/chevron-left.svg" alt="article précédent"></button>
             <button class="carrousel__button carrousel__button--nxt"><img @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" class="carrousel__button--img" src="./public/icons/carrousel/chevron-right.svg" alt="article suivant"></button>            
             
-            <div class="carrousel__track" x-ref="parent">
+            <div class="carrousel__track" x-ref="parent" @scroll.debounce.50ms.passive="
+            hrefCourant = '#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
 
                 <div id="card-1" class="carrousel__card card card--red">
                     <img class="card__img" src="./public/img/home/place.webp" alt="article lieu">
@@ -177,12 +178,12 @@
             </div>
 
             <div class="carrousel__dots">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+                <a href="#card-1" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-1'}"></span></a>
+                <a href="#card-2" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-2'}"></span></a>
+                <a href="#card-3" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-3'}"></span></a>
+                <a href="#card-4" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-4'}"></span></a>
+                <a href="#card-5" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-5'}"></span></a>
+                <a href="#card-6" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-6'}"></span></a>
             </div>
         </div>
     </section>
