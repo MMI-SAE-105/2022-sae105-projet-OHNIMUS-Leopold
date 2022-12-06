@@ -9,3 +9,9 @@
     padding: 8px 18px 8px 18px;
     text-decoration: none;
 }
+
+.button:hover {
+    color: var(--noir-nuit);
+    background-color: var(--blanc-casse);
+    border-color: var(--noir-nuit);
+}

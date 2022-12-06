@@ -112,63 +112,77 @@
         <p class="home__title">Toi, qui est passionné par la Corée ! Laisse toi guider par ce site et approfondi ta connaissance de ce pays et de sa culture !</p>
     </section>
 
-    <!-- <section class="articles">
+    <section class="articles">
         <h1 class="articles__title">Les articles</h1>
         <div class="articles__carrousel carrousel">
-            <button class="carrousel__button carrousel__button--prv"></button>
-            <button class="carrousel__button carrousel__button--nxt"></button>
+            
+                <button class="carrousel__button carrousel__button--prv"><img class="carrousel__button--img" src="./public/icons/carrousel/chevron-left.svg" alt="article précédent"></button>
+                <button class="carrousel__button carrousel__button--nxt"><img class="carrousel__button--img" src="./public/icons/carrousel/chevron-right.svg" alt="article suivant"></button>
+            
             <div class="carrousel__track">
-                <article class="carrousel__card card">
-                    <div class="card__item card__item--red">
+                
+                    <div class="carrousel__card card card--red">
                         <img class="card__img" src="./public/img/home/place.webp" alt="article lieu">
-                        <h2 class="card__caption card__caption--title">Un lieu</h2>
-                        <img class="card__caption card__caption--icon" src="./public/icons/carrousel/arrow-right.svg" alt="voir l'article">
-                        <p class="card__caption card__caption--text">test</p>
+                        <div class="card__caption caption">
+                            <h2 class="caption__title">Un lieu</h2>
+                            <img class="caption__icon" src="./public/icons/carrousel/arrow-right.svg" alt="voir l'article">
+                            <p class="caption__text">À la découverte d’un lieu magnifique : le temple Haedong Yonggungsa</p>
+                        </div>
                     </div>
-                </article>
-                <article class="carrousel__card card">
-                    <div class="card__item card__item--white">
+                
+                
+                    <div class="carrousel__card card card--white">
                         <img class="card__img" src="./public/img/home/book.webp" alt="article livre">
-                        <h2 class="card__caption card__caption--title">Un livre</h2>
-                        <img class="card__caption card__caption--icon" src="./public/icons/carrousel/arrow-right.svg" alt="voir l'article">
-                        <p class="card__caption card__caption--text">test</p>
+                        <div class="card__caption caption">
+                            <h2 class="caption__title">Un livre</h2>
+                            <img class="caption__icon" src="./public/icons/carrousel/arrow-right.svg" alt="voir l'article">
+                            <p class="caption__text">“Corées, Enfin la paix ?”<br>Un regard sur les femmes de réconfort</p>
+                        </div>
                     </div>
-                </article>
-                <article class="carrousel__card card">
-                    <div class="card__item card__item--black">
+                
+                
+                    <div class="carrousel__card card card--black">
                         <img class="card__img" src="./public/img/home/hope.webp" alt="article espoir">
-                        <h2 class="card__caption card__caption--title">Un espoir</h2>
-                        <img class="card__caption card__caption--icon" src="./public/icons/carrousel/arrow-right-yellow.svg" alt="voir l'article">
-                        <p class="card__caption card__caption--text">test</p>
+                        <div class="card__caption caption">
+                            <h2 class="caption__title">Un espoir</h2>
+                            <img class="caption__icon" src="./public/icons/carrousel/arrow-right-yellow.svg" alt="voir l'article">
+                            <p class="caption__text">Une société de moins en moins patriarcale et qui s'ouvre au monde</p>
+                        </div>
                     </div>
-                </article>
-                <article class="carrousel__card card">
-                    <div class="card__item card__item--red">
+                
+                
+                    <div class="carrousel__card card card--red">
                         <img class="card__img" src="./public/img/home/series.webp" alt="article série">
-                        <h2 class="card__caption card__caption--title">Une série</h2>
-                        <img class="card__caption card__caption--icon" src="./public/icons/carrousel/arrow-right.svg" alt="voir l'article">
-                        <p class="card__caption card__caption--text">test</p>
+                        <div class="card__caption caption">
+                            <h2 class="caption__title">Une série</h2>
+                            <img class="caption__icon" src="./public/icons/carrousel/arrow-right.svg" alt="voir l'article">
+                            <p class="caption__text">Une série remarquable<br>“Vincenzo”</p>
+                        </div>
                     </div>
-                </article>
-                <article class="carrousel__card card">
-                    <div class="card__item card__item--yellow">
+                
+                
+                    <div class="carrousel__card card card--yellow">
                         <img class="card__img" src="./public/img/home/music.webp" alt="article musique">
-                        <h2 class="card__caption card__caption--title">Une musique</h2>
-                        <img class="card__caption card__caption--icon" src="./public/icons/carrousel/arrow-right.svg" alt="voir l'article">
-                        <p class="card__caption card__caption--text">test</p>
+                        <div class="card__caption caption">
+                            <h2 class="caption__title">Une musique</h2>
+                            <img class="caption__icon" src="./public/icons/carrousel/arrow-right.svg" alt="voir l'article">
+                            <p class="caption__text">“Egoist”<br>Une musique d’Olivia Hye</p>
+                        </div>
                     </div>
-                </article>
-                <article class="carrousel__card card">
-                    <div class="card__item card__item--blue">
+                
+                
+                    <div class="carrousel__card card card--blue">
                         <img class="card__img" src="./public/img/home/regret.webp" alt="article regret">
-                        <h2 class="card__caption card__caption--title">Un regret</h2>
-                        <img class="card__caption card__caption--icon" src="./public/icons/carrousel/arrow-right.svg" alt="voir l'article">
-                        <p class="card__caption card__caption--text">test</p>
+                        <div class="card__caption caption">
+                            <h2 class="caption__title">Un regret</h2>
+                            <img class="caption__icon" src="./public/icons/carrousel/arrow-right.svg" alt="voir l'article">
+                            <p class="caption__text">Un de mes grands regrets<br>La pollution générée par l'industrie de la K-PO</p>
+                        </div>
                     </div>
-                </article>
+                
             </div>
         </div>
-    </section> -->
+    </section>
     
     
     

@@ -2,20 +2,63 @@
 
 } */
 
-/* .carrousel__button {
+.carrousel__button {
+    background-color: unset;
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    margin-top: -5px;
+    padding: 185px 36px 255px 15px;
+    display: grid;
+    align-content: center;
+}
 
+/* .carrousel__button:hover {
+    
 } */
 
-/* .carrousel__button--prv {
+.carrousel__button--prv {
+    left: 0;
+    background: linear-gradient(90deg, rgb(245,241,210) 0%, rgb(245,241,210,0) 100%);
+}
 
-} */
+.carrousel__button--nxt {
+    right: 0;
+    background: linear-gradient(90deg, rgb(245,241,210,0) 0%, rgb(245,241,210) 100%);
+}
 
-/* .carrousel__button--nxt {
+.carrousel__button--img{
+    margin-top: -25px;    
+}
 
-} */
+@media (min-width: 565px) {
+    .carrousel__button--img{
+        margin-top: 0px;    
+    }
+}
+
+@media (min-width: 420px) {
+    .carrousel__button--img{
+        margin-top: 10px;    
+    }
+}
+
+@media (min-width: 600px) {
+    .carrousel__button--img{
+        margin-top: 30px;    
+    }
+
+    .carrousel__button {
+        padding: 185px 36px 230px 15px;
+    }
+    
+}
 
 .carrousel__track {
     display: flex;
+    /* transform: translateX(); */
+    overflow: hidden;
 }
 
 /* .carrousel__card {
