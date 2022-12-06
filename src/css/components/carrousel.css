@@ -9,7 +9,7 @@
     padding: 0;
     position: absolute;
     margin-top: -5px;
-    padding: 185px 36px 255px 15px;
+    padding: 185px 0 255px 0;
     display: grid;
     align-content: center;
 }
@@ -21,11 +21,15 @@
 .carrousel__button--prv {
     left: 0;
     background: linear-gradient(90deg, rgb(245,241,210) 0%, rgb(245,241,210,0) 100%);
+    padding-left: 15px;
+    padding-right: 36px;
 }
 
 .carrousel__button--nxt {
     right: 0;
     background: linear-gradient(90deg, rgb(245,241,210,0) 0%, rgb(245,241,210) 100%);
+    padding-left: 36px;
+    padding-right: 15px;
 }
 
 .carrousel__button--img{
@@ -50,7 +54,7 @@
     }
 
     .carrousel__button {
-        padding: 185px 36px 230px 15px;
+        padding: 185px 0 230px 0;
     }
     
 }
