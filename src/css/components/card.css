@@ -6,6 +6,26 @@
 
 } */
 
+/* .card__item--red {
+
+} */
+
+/* .card__item--white {
+
+} */
+
+/* .card__item--black {
+
+} */
+
+/* .card__item--yellow {
+
+} */
+
+/* .card__item--blue {
+
+} */
+
 /* .card__img {
 
 } */
@@ -14,10 +34,22 @@
 
 } */
 
-/* .card__caption--title {
+.card__caption--title {
+    font-family: var(--sans-serif);
+    font-size: var(--button);
+    font-weight: var(--semi-bold);
+    color: var(--noir-nuit);
+    margin: 0;
+}
 
-} */
+.card__caption--text {
+    font-family: var(--sans-serif);
+    font-size: var(--small-text);
+    font-weight: var(--regular);
+    color: var(--noir-nuit);
+    margin: 0;
+}
 
-/* .card__caption--text {
-
-} */
+.card__item--black > .card__caption {
+    color: var(--jaune);
+}

@@ -14,9 +14,9 @@
 
 } */
 
-/* .carrousel__track {
-
-} */
+.carrousel__track {
+    display: flex;
+}
 
 /* .carrousel__card {
 
