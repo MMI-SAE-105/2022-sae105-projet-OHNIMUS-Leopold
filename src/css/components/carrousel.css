@@ -34,7 +34,8 @@
 }
 
 .carrousel__button--img{
-    margin-top: -25px;    
+    margin-top: -25px;
+    cursor: pointer;
 }
 
 @media (min-width: 565px) {
