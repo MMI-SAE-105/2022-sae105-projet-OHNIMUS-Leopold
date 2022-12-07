@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../public/icons/Logo.webp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+    
+    <header class="header">
+        <img class="header__logo" src="../public/icons/logo.webp" alt="logo du site">
+        <p class="header__title">Korean Notes</p>
+        <div class="header__menu menu">
+            <img @click="menuIsOpen = ! menuIsOpen" class="menu__icon" src="../public/icons/menu/menu.svg" alt="ouvrir menu">
+            
+            <div class="menu__open" x-show="menuIsOpen" x-data="{articlesAreOpen: false, othersAreOpen: false}">
+                
+                <div class="menu__header">
+                    <img class="menu__lang" src="../public/icons/menu/globe.svg" alt="changer de langue">
+                    <p class="menu__title">Menu</p>
+                    <img @click="menuIsOpen = ! menuIsOpen" class="menu__close" src="../public/icons/menu/black-cross.svg" alt="fermer menu">
+                </div>
+
+                <span class="menu__bar"></span>
+                
+                <nav class="menu__nav">
+                    <ul class="menu__section" @click="articlesAreOpen = ! articlesAreOpen; othersAreOpen = false">Mes articles
+                        <div class="menu__list" x-show="articlesAreOpen" x-transition.duration.200ms>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="">Temple Haedong Yonggungsa</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="">"Corées, Enfin la paix ?" Un regard sur les femmes de réconfort</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="">Une société sud-coréenne de moins en moins patriarcale et qui s'ouvre au monde</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="">Une série remarquable "Vincenzo"</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="">"Egoist" Une musique d’Olivia Hye</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="">Un de mes grands regrets La pollution générée par l'industrie de la K-POP</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="">Glossaire</a>
+                            </li>
+                        </div>
+                    </ul>
+                    <ul class="menu__section" @click="othersAreOpen = ! othersAreOpen; articlesAreOpen = false">Voir plus
+                        <div class="menu__list" x-show="othersAreOpen" x-transition.duration.200ms>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="">À propos</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="">Contact</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="">Autres projets</a>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+
+                <div class="menu__footer">
+                    <span class="menu__circle"></span>
+                    <span class="menu__circle"></span>
+                    <span class="menu__circle"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="home">
+        <div class="home__slider slider">
+            <div class="slider__track">
+                <div class="slider__item slider__item--1">
+                    <img class="slider__img" src="../public/img/home/slider1.webp" alt="photo1" />
+                </div>
+                <div class="slider__item slider__item--2">
+                    <img class="slider__img" src="../public/img/home/slider2.webp" alt="photo2" />
+                </div>
+                <div class="slider__item slider__item--3">
+                    <img class="slider__img" src="../public/img/home/slider3.webp" alt="photo3" />
+                </div>
+                <div class="slider__item slider__item--4">
+                    <img class="slider__img" src="../public/img/home/slider4.webp" alt="photo4" />
+                </div>
+                <div class="slider__item slider__item--5">
+                    <img class="slider__img" src="../public/img/home/slider5.webp" alt="photo5" />
+                </div>
+            </div>
+        </div>
+        <p class="home__title">Toi, qui est passionné par la Corée ! Laisse toi guider par ce site et approfondi ta connaissance de ce pays et de sa culture !</p>
+    </section>
+
+    <section class="articles">
+        <h1 class="articles__title">Les articles</h1>
+        
+        <div class="articles__carrousel carrousel" x-data="{hrefCourant: '#card-1',}">
+            <button class="carrousel__button carrousel__button--prv"><img @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" class="carrousel__button--img" src="../public/icons/carrousel/chevron-left.svg" alt="article précédent"></button>
+            <button class="carrousel__button carrousel__button--nxt"><img @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" class="carrousel__button--img" src="../public/icons/carrousel/chevron-right.svg" alt="article suivant"></button>            
+            
+            <div class="carrousel__track" x-ref="parent" @scroll.debounce.50ms.passive="
+            hrefCourant = '#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+
+                <div id="card-1" class="carrousel__card card card--red">
+                    <img class="card__img" src="../public/img/home/place.webp" alt="article lieu">
+                    <div class="card__caption caption">
+                        <h2 class="caption__title">Un lieu</h2>
+                        <img class="caption__icon" src="../public/icons/carrousel/arrow-right.svg" alt="voir l'article">
+                        <p class="caption__text">À la découverte d’un lieu magnifique : le temple Haedong Yonggungsa</p>
+                    </div>
+                </div>
+            
+                <div id="card-2" class="carrousel__card card card--white">
+                    <img class="card__img" src="../public/img/home/book.webp" alt="article livre">
+                    <div class="card__caption caption">
+                        <h2 class="caption__title">Un livre</h2>
+                        <img class="caption__icon" src="../public/icons/carrousel/arrow-right.svg" alt="voir l'article">
+                        <p class="caption__text">“Corées, Enfin la paix ?”<br>Un regard sur les femmes de réconfort</p>
+                    </div>
+                </div>
+            
+                <div id="card-3" class="carrousel__card card card--black">
+                    <img class="card__img" src="../public/img/home/hope.webp" alt="article espoir">
+                    <div class="card__caption caption">
+                        <h2 class="caption__title">Un espoir</h2>
+                        <img class="caption__icon" src="../public/icons/carrousel/arrow-right-yellow.svg" alt="voir l'article">
+                        <p class="caption__text">Une société de moins en moins patriarcale et qui s'ouvre au monde</p>
+                    </div>
+                </div>
+            
+                <div id="card-4" class="carrousel__card card card--red">
+                    <img class="card__img" src="../public/img/home/series.webp" alt="article série">
+                    <div class="card__caption caption">
+                        <h2 class="caption__title">Une série</h2>
+                        <img class="caption__icon" src="../public/icons/carrousel/arrow-right.svg" alt="voir l'article">
+                        <p class="caption__text">Une série remarquable<br>“Vincenzo”</p>
+                    </div>
+                </div>
+            
+                <div id="card-5" class="carrousel__card card card--yellow">
+                    <img class="card__img" src="../public/img/home/music.webp" alt="article musique">
+                    <div class="card__caption caption">
+                        <h2 class="caption__title">Une musique</h2>
+                        <img class="caption__icon" src="../public/icons/carrousel/arrow-right.svg" alt="voir l'article">
+                        <p class="caption__text">“Egoist”<br>Une musique d’Olivia Hye</p>
+                    </div>
+                </div>
+            
+                <div id="card-6" class="carrousel__card card card--blue">
+                    <img class="card__img" src="../public/img/home/regret.webp" alt="article regret">
+                    <div class="card__caption caption">
+                        <h2 class="caption__title">Un regret</h2>
+                        <img class="caption__icon" src="../public/icons/carrousel/arrow-right.svg" alt="voir l'article">
+                        <p class="caption__text">Un de mes grands regrets<br>La pollution générée par l'industrie de la K-PO</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carrousel__dots">
+                <a href="#card-1" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-1'}"></span></a>
+                <a href="#card-2" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-2'}"></span></a>
+                <a href="#card-3" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-3'}"></span></a>
+                <a href="#card-4" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-4'}"></span></a>
+                <a href="#card-5" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-5'}"></span></a>
+                <a href="#card-6" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-6'}"></span></a>
+            </div>
+        </div>
+        <div class="articles__buttons">
+            <a class="articles__button button" href="">Glossaire</a>
+            <a class="articles__button button" href="">Autres projets</a>
+        </div>
+    </section>
+    
+    
+    
+    
+    <section>
+
+    </section>
+    <footer class="footer">
+        <p class="footer__name">Léopold OHNIMUS GR-B2</p>
+        <span class="footer__bar"></span>
+        <a class="footer__mail" href="mailto:leopold.ohnimus02@orange.fr">leopold.ohnimus02@orange.fr</a>
+        <div class="footer__options">
+            <a class="footer__link button" href="">À propos</a>
+            <a class="footer__link button" href="">Contact</a>
+        </div>
+        <p class="footer__legal">
+            Projet réalisé dans le cadre d’un exercice pédagogique au
+            <a class="footer__legal--link" href="http://mmimontbeliard.com/">Département MMI de Montbéliard</a>.
+        </p>
+    </footer>
+</body>
+</html>
