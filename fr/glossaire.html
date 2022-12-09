@@ -10,7 +10,125 @@
     <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body>
+<body x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
     
+    <header class="header">
+        <a href="./index.html"><img class="header__logo" src="../public/icons/logo.webp" alt="logo du site"></a>
+        <p class="header__title">Korean Notes</p>
+        <div class="header__menu menu">
+            <img @click="menuIsOpen = ! menuIsOpen" class="menu__icon" src="../public/icons/menu/menu.svg" alt="ouvrir menu">
+            
+            <div class="menu__open" x-show="menuIsOpen" x-data="{articlesAreOpen: false, othersAreOpen: false}">
+                
+                <div class="menu__header">
+                    <img class="menu__lang" src="../public/icons/menu/globe.svg" alt="changer de langue">
+                    <p class="menu__title">Menu</p>
+                    <img @click="menuIsOpen = ! menuIsOpen" class="menu__close" src="../public/icons/menu/black-cross.svg" alt="fermer menu">
+                </div>
+
+                <span class="menu__bar"></span>
+                
+                <nav class="menu__nav">
+                    <ul class="menu__section" @click="articlesAreOpen = ! articlesAreOpen; othersAreOpen = false">Mes articles
+                        <div class="menu__list" x-show="articlesAreOpen" x-transition.duration.200ms>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./lieu.html">Temple Haedong Yonggungsa</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./livre.html">"Corées, Enfin la paix ?" Un regard sur les femmes de réconfort</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./espoir.html">Une société sud-coréenne de moins en moins patriarcale et qui s'ouvre au monde</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./serie.html">Une série remarquable "Vincenzo"</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./musique.html">"Egoist" Une musique d’Olivia Hye</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./regret.html">Un de mes grands regrets La pollution générée par l'industrie de la K-POP</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./glossaire.html">Glossaire</a>
+                            </li>
+                        </div>
+                    </ul>
+                    <ul class="menu__section" @click="othersAreOpen = ! othersAreOpen; articlesAreOpen = false">Voir plus
+                        <div class="menu__list" x-show="othersAreOpen" x-transition.duration.200ms>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./apropos.html">À propos</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./contact.html">Contact</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./projets.html">Autres projets</a>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+
+                <div class="menu__footer">
+                    <span class="menu__circle"></span>
+                    <span class="menu__circle"></span>
+                    <span class="menu__circle"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="glossary">
+        <h1 class="glossary__title">Glossaire</h1>
+        <p class="glossary__desc">Pour des définitions, c’est ici !<br>Recherchez simplement votre mot et scrollez !</p>
+        <div class="glossary__searchbox searchbox">
+            <input class="searchbox__bar" type="text">
+            <img class="searchbox__icon" src="../public/icons/search.svg" alt="search icon">
+        </div>
+        <p class="glossary__copyrights">Définitions de <a class="glossary__copyrights--link" href="https://www.larousse.fr/">larousse.fr</a></p>
+    </section>
+
+    <dl>
+        <dt></dt>
+        <dd></dd>
+
+        <dt></dt>
+        <dd></dd>
+        
+        <dt></dt>
+        <dd></dd>
+        
+        <dt></dt>
+        <dd></dd>
+        
+        <dt></dt>
+        <dd></dd>
+        
+        <dt></dt>
+        <dd></dd>
+        
+        <dt></dt>
+        <dd></dd>
+        
+        <dt></dt>
+        <dd></dd>
+        
+        <dt></dt>
+        <dd></dd>
+        
+        <dt></dt>
+        <dd></dd>
+        
+    </dl>
 </body>
 </html>
