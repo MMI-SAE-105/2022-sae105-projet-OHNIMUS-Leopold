@@ -17,21 +17,21 @@
         <a href="./index.html"><img class="header__logo" src="../public/icons/logo.webp" alt="logo du site"></a>
         <p class="header__title">Korean Notes</p>
         <div class="header__menu menu">
-            <button class="menu__icon--button" @click="menuIsOpen = ! menuIsOpen"><img class="menu__icon" src="../public/icons/menu/menu.svg" alt="ouvrir menu"></button>
+            <button aria-controls="mainMenu" class="menu__icon--button" @click="menuIsOpen = ! menuIsOpen"><img class="menu__icon" src="../public/icons/menu/menu.svg" alt="ouvrir menu"></button>
             
-            <div class="menu__open" x-show="menuIsOpen" x-data="{articlesAreOpen: false, othersAreOpen: false}">
+            <div id="mainMenu" class="menu__open" x-show="menuIsOpen" x-data="{articlesAreOpen: false, othersAreOpen: false}">
                 
                 <div class="menu__header">
                     <img class="menu__lang" src="../public/icons/menu/globe.svg" alt="changer de langue">
                     <p class="menu__title">Menu</p>
-                    <button class="menu__close--button" @click="menuIsOpen = ! menuIsOpen"><img class="menu__close" src="../public/icons/menu/black-cross.svg" alt="fermer menu"></button>
+                    <button aria-controls="mainMenu" class="menu__close--button" @click="menuIsOpen = ! menuIsOpen"><img class="menu__close" src="../public/icons/menu/black-cross.svg" alt="fermer menu"></button>
                 </div>
 
                 <span class="menu__bar"></span>
                 
                 <nav class="menu__nav">
-                    <ul class="menu__section"><button @click="articlesAreOpen = ! articlesAreOpen; othersAreOpen = false" class="menu__section--button">Mes articles</button>
-                        <div class="menu__list" x-show="articlesAreOpen" x-transition.duration.200ms>
+                    <ul class="menu__section"><button aria-controls="navArticles" @click="articlesAreOpen = ! articlesAreOpen; othersAreOpen = false" class="menu__section--button">Mes articles</button>
+                        <div id="navArticles" class="menu__list" x-show="articlesAreOpen" x-transition.duration.200ms>
                             <li class="menu__item">
                                 <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
                                 <a class="menu__link" href="./lieu.html">Temple Haedong Yonggungsa</a>
@@ -62,8 +62,8 @@
                             </li>
                         </div>
                     </ul>
-                    <ul class="menu__section"><button @click="othersAreOpen = ! othersAreOpen; articlesAreOpen = false" class="menu__section--button">Voir plus</button>
-                        <div class="menu__list" x-show="othersAreOpen" x-transition.duration.200ms>
+                    <ul class="menu__section"><button aria-controls="navOthers" @click="othersAreOpen = ! othersAreOpen; articlesAreOpen = false" class="menu__section--button">Voir plus</button>
+                        <div id="navOthers" class="menu__list" x-show="othersAreOpen" x-transition.duration.200ms>
                             <li class="menu__item">
                                 <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
                                 <a class="menu__link" href="./apropos.html">À propos</a>
@@ -116,8 +116,8 @@
         <h1 class="articles__title">Les articles</h1>
         
         <div class="articles__carrousel carrousel" x-data="{hrefCourant: '#card-1',}">
-            <button class="carrousel__button carrousel__button--prv"><img @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" class="carrousel__button--img" src="../public/icons/carrousel/chevron-left.svg" alt="article précédent"></button>
-            <button class="carrousel__button carrousel__button--nxt"><img @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" class="carrousel__button--img" src="../public/icons/carrousel/chevron-right.svg" alt="article suivant"></button>            
+            <button aria-label="previousSlide" class="carrousel__button carrousel__button--prv"><img @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" class="carrousel__button--img" src="../public/icons/carrousel/chevron-left.svg" alt="article précédent"></button>
+            <button aria-label="nextSlide" class="carrousel__button carrousel__button--nxt"><img @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" class="carrousel__button--img" src="../public/icons/carrousel/chevron-right.svg" alt="article suivant"></button>            
             
             <div class="carrousel__track" x-ref="parent" @scroll.debounce.50ms.passive="
             hrefCourant = '#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
@@ -178,12 +178,12 @@
             </div>
 
             <div class="carrousel__dots">
-                <a href="#card-1" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-1'}"></span></a>
-                <a href="#card-2" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-2'}"></span></a>
-                <a href="#card-3" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-3'}"></span></a>
-                <a href="#card-4" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-4'}"></span></a>
-                <a href="#card-5" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-5'}"></span></a>
-                <a href="#card-6" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-6'}"></span></a>
+                <a aria-label="article-1" href="#card-1" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-1'}"></span></a>
+                <a aria-label="article-2" href="#card-2" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-2'}"></span></a>
+                <a aria-label="article-3" href="#card-3" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-3'}"></span></a>
+                <a aria-label="article-4" href="#card-4" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-4'}"></span></a>
+                <a aria-label="article-5" href="#card-5" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-5'}"></span></a>
+                <a aria-label="article-6" href="#card-6" class="carrousel__navigate"><span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-6'}"></span></a>
             </div>
         </div>
         <div class="articles__buttons">
