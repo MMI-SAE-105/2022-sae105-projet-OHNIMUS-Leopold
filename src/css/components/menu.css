@@ -2,6 +2,10 @@
 
 } */
 
+.menu__icon--button {
+    display: contents;
+}
+
 .menu__icon {
     /* vertical-align:middle; */
     margin-top: 40px;
@@ -56,6 +60,10 @@
     cursor: pointer;
 }
 
+.menu__close--button {
+    display: contents;
+}
+
 .menu__bar {
     content: '';
     background: var(--bleu);
@@ -77,6 +85,11 @@
     padding: 0;
     text-align: center;
     margin-bottom: 30px;
+    /* cursor: pointer; */
+}
+
+.menu__section--button {
+    display: contents;
     cursor: pointer;
 }
 
