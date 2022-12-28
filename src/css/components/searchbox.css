@@ -4,6 +4,7 @@
 }
 
 .searchbox__bar {
+    background-color: var(--blanc-casse);
     font-family: var(--sans-serif);
     font-size: var(--small-text);
     font-weight: var(--regular);
@@ -11,27 +12,26 @@
     margin: 0;
     border-radius: 10px;
     border: 2px solid var(--noir-nuit);
-    padding: 9px 0 9px 0;
+    width: 232px;
+    padding: 9px 39px 9px 10px;
 }
 
 .searchbox__bar::placeholder {
-    font-family: var(--sans-serif);
-    font-size: var(--small-text);
-    font-weight: var(--regular);
     color: var(--noir-nuit);
-    margin: 0;
 }
 
 .searchbox__bar:focus-visible {
-    accent-color: none;
+    outline: 2px solid var(--bleu);
+    border-color: var(--blanc-casse);
 }
 
 .searchbox__button {
     border: none;
     background: none;
-    margin: 0;
+    margin: 5.5px 0 0 243px;
     padding: 0;
     cursor: pointer;
+    position: absolute;
 }
 
 /* .searchbox__button--icon {

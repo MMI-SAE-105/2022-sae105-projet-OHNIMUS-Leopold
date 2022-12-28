@@ -16,21 +16,21 @@
         <a href="./index.html"><img class="header__logo" src="../public/icons/logo.webp" alt="logo du site"></a>
         <p class="header__title">Korean Notes</p>
         <div class="header__menu menu">
-            <img @click="menuIsOpen = ! menuIsOpen" class="menu__icon" src="../public/icons/menu/menu.svg" alt="ouvrir menu">
+            <button aria-controls="mainMenu" class="menu__icon--button" @click="menuIsOpen = ! menuIsOpen"><img class="menu__icon" src="../public/icons/menu/menu.svg" alt="ouvrir menu"></button>
             
-            <div class="menu__open" x-show="menuIsOpen" x-data="{articlesAreOpen: false, othersAreOpen: false}">
+            <div id="mainMenu" class="menu__open" x-show="menuIsOpen" x-data="{articlesAreOpen: false, othersAreOpen: false}">
                 
                 <div class="menu__header">
                     <img class="menu__lang" src="../public/icons/menu/globe.svg" alt="changer de langue">
                     <p class="menu__title">Menu</p>
-                    <img @click="menuIsOpen = ! menuIsOpen" class="menu__close" src="../public/icons/menu/black-cross.svg" alt="fermer menu">
+                    <button aria-controls="mainMenu" class="menu__close--button" @click="menuIsOpen = ! menuIsOpen"><img class="menu__close" src="../public/icons/menu/black-cross.svg" alt="fermer menu"></button>
                 </div>
 
                 <span class="menu__bar"></span>
                 
                 <nav class="menu__nav">
-                    <ul class="menu__section" @click="articlesAreOpen = ! articlesAreOpen; othersAreOpen = false">Mes articles
-                        <div class="menu__list" x-show="articlesAreOpen" x-transition.duration.200ms>
+                    <ul class="menu__section"><button aria-controls="navArticles" @click="articlesAreOpen = ! articlesAreOpen; othersAreOpen = false" class="menu__section--button">Mes articles</button>
+                        <div id="navArticles" class="menu__list" x-show="articlesAreOpen" x-transition.duration.200ms>
                             <li class="menu__item">
                                 <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
                                 <a class="menu__link" href="./lieu.html">Temple Haedong Yonggungsa</a>
@@ -61,8 +61,8 @@
                             </li>
                         </div>
                     </ul>
-                    <ul class="menu__section" @click="othersAreOpen = ! othersAreOpen; articlesAreOpen = false">Voir plus
-                        <div class="menu__list" x-show="othersAreOpen" x-transition.duration.200ms>
+                    <ul class="menu__section"><button aria-controls="navOthers" @click="othersAreOpen = ! othersAreOpen; articlesAreOpen = false" class="menu__section--button">Voir plus</button>
+                        <div id="navOthers" class="menu__list" x-show="othersAreOpen" x-transition.duration.200ms>
                             <li class="menu__item">
                                 <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
                                 <a class="menu__link" href="./apropos.html">À propos</a>
@@ -100,36 +100,43 @@
         <p class="glossary__copyrights">Définitions de <a class="glossary__copyrights--link" href="https://www.larousse.fr/">larousse.fr</a></p>
     </section>
 
-    <dl>
-        <dt></dt>
-        <dd></dd>
+    <dl class="definition">
 
-        <dt></dt>
-        <dd></dd>
+        <dt class="definition--title"></dt>
+        <dd class="definition--desc"></dd>
         
-        <dt></dt>
-        <dd></dd>
+        <dt class="definition--title"></dt>
+        <dd class="definition--desc"></dd>
         
-        <dt></dt>
-        <dd></dd>
+        <dt class="definition--title"></dt>
+        <dd class="definition--desc"></dd>
         
-        <dt></dt>
-        <dd></dd>
+        <dt class="definition--title"></dt>
+        <dd class="definition--desc"></dd>
         
-        <dt></dt>
-        <dd></dd>
+        <dt class="definition--title"></dt>
+        <dd class="definition--desc"></dd>
         
-        <dt></dt>
-        <dd></dd>
+        <dt class="definition--title"></dt>
+        <dd class="definition--desc"></dd>
         
-        <dt></dt>
-        <dd></dd>
+        <dt class="definition--title"></dt>
+        <dd class="definition--desc"></dd>
         
-        <dt></dt>
-        <dd></dd>
+        <dt class="definition--title"></dt>
+        <dd class="definition--desc"></dd>
         
-        <dt></dt>
-        <dd></dd>
+        <dt class="definition--title"></dt>
+        <dd class="definition--desc"></dd>
+        
+        <dt class="definition--title"></dt>
+        <dd class="definition--desc"></dd>
+        
+        <dt class="definition--title"></dt>
+        <dd class="definition--desc"></dd>
+        
+        <dt class="definition--title"></dt>
+        <dd class="definition--desc"></dd>
         
     </dl>
 </body>
