@@ -96,3 +96,7 @@ body {
     color: var(--noir-nuit);
     margin: 0;
 }
+
+mark {
+    background-color: var(--bleu);
+}
