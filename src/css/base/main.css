@@ -76,3 +76,23 @@ body {
     text-decoration: none;
     color: var(--noir-nuit);
 }
+
+.definition {
+    margin: 50px 20px 0 20px;
+}
+
+.definition--title {
+    font-family: var(--sans-serif);
+    font-size: var(--button);
+    font-weight: var(--semi-bold);
+    color: var(--noir-nuit);
+    margin: 26px 0 2px 0;
+}
+
+.definition--desc {
+    font-family: var(--sans-serif);
+    font-size: var(--small-text);
+    font-weight: var(--regular);
+    color: var(--noir-nuit);
+    margin: 0;
+}
