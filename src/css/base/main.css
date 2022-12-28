@@ -104,17 +104,3 @@ html {
 mark {
     background-color: var(--bleu);
 }
-
-.tothetop {
-    display: flex;
-    justify-content: end;
-    margin: 9px 15px 15px 0;
-}
-
-/* .tothetop__img {
-
-} */
-
-/* .tothetop__img--link {
-
-} */
