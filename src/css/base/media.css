@@ -1,0 +1,17 @@
+.illustration {
+    margin: 20px 0 30px 0;
+    text-align: center;
+}
+
+.illustration__img {
+    width: 100%;
+    max-width: 750px;
+}
+
+.illustration__caption {
+    font-family: var(--sans-serif);
+    font-size: var(--small-text);
+    font-weight: var(--regular);
+    color: var(--noir-nuit);
+    margin: 6px 0 0 0;
+}

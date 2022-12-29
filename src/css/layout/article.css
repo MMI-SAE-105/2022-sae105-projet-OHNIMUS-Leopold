@@ -1,0 +1,34 @@
+.article {
+
+}
+
+.article__title {
+    text-align: center;
+}
+
+.article__accroche {
+    
+}
+
+/* .article__illustration {
+    
+} */
+
+.article__subtitle {
+    
+}
+
+.article__text {
+
+}
+
+.article__accroche,
+.article__subtitle,
+.article__text {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* .article__line--middle {
+
+} */
