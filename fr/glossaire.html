@@ -94,8 +94,8 @@
         <h1 class="glossary__title">Glossaire</h1>
         <p class="glossary__desc">Pour des définitions, c'est ici !<br>Recherchez simplement votre mot et scrollez !</p>
         <div class="glossary__searchbox searchbox">
-            <input id="text-to-search" oninput="search()" class="searchbox__bar" type="text" placeholder="Recherche...">
-            <button onclick="search()" class="searchbox__button">
+            <input id="text-to-search" oninput="search()" class="searchbox__bar" type="text" placeholder="Recherche..." aria-label="Recherche">
+            <button onclick="search()" class="searchbox__button" aria-controls="text-to-search">
                 <img class="searchbox__button--icon" src="../public/icons/search.svg" alt="search icon">
             </button>
         </div>
