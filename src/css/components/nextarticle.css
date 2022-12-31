@@ -12,7 +12,7 @@
     max-width: 600px;
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
-    margin: 38px 0 60px 0;
+    margin: 38px 0 0 0;
     background-color: var(--noir-nuit);
     border-radius: 20px;
     border: 2px solid var(--noir-nuit);
