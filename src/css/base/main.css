@@ -104,3 +104,15 @@ html {
 mark {
     background-color: var(--bleu);
 }
+
+.list {
+    font-family: var(--sans-serif);
+    font-size: var(--body);
+    font-weight: var(--regular);
+    color: var(--noir-nuit);
+    margin: 0;
+}
+
+/* .list__option {
+
+} */

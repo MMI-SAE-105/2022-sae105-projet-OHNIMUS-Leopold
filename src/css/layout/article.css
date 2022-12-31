@@ -18,6 +18,7 @@
 
 .article__subtitle {
     margin-bottom: 10px;
+    margin-top: 30px;
 }
 
 .article__text {
@@ -31,6 +32,43 @@
     margin-right: 20px;
 }
 
-/* .article__line--middle {
+.article__line--middle {
+    background-color: var(--saumon);
+    height: 5px;
+    width: 40%;
+    margin: 0 auto 20px auto;
+}
 
-} */
+.article__line--right {
+    position: absolute;
+    right: 0;
+    background-color: var(--saumon);
+    height: 10px;
+    width: 27%;
+    margin: 10px auto 0 auto;
+}
+
+.article__line--left {
+    position: absolute;
+    left: 0;
+    background-color: var(--saumon);
+    height: 10px;
+    width: 40%;
+    margin: 0 auto 0 auto;
+}
+
+.article__circles {
+    margin-bottom: 20px;
+}
+
+.article__bg--blue {
+    background-color: var(--bleu);
+}
+
+.article__list {
+    margin: -20px 20px 20px 10px;
+}
+
+.article__authorpov {
+    margin: 50px 0 20px 0;
+}

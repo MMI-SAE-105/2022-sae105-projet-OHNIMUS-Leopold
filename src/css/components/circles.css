@@ -1,0 +1,24 @@
+.circles--middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.circle--s,
+.circle--m {
+    border-radius: 50%;
+}
+
+.circle--s {
+    height: 10px;
+    width: 10px;
+}
+
+.circle--m {
+    height: 20px;
+    width: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
