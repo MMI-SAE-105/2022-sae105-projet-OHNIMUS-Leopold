@@ -1,3 +1,7 @@
+/* .circles {
+
+} */
+
 .circles--middle {
     display: flex;
     justify-content: center;
@@ -6,8 +10,7 @@
     margin-right: auto;
 }
 
-.circle--s,
-.circle--m {
+.circle {
     border-radius: 50%;
 }
 
