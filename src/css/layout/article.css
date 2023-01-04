@@ -6,6 +6,8 @@
     text-align: center;
     margin-top: 30px;
     margin-bottom: 20px;
+    margin-left: 29px;
+    margin-right: 29px;
 }
 
 .article__accroche {
@@ -39,7 +41,7 @@
     margin: 0 auto 20px auto;
 }
 
-.article__line--right {
+.article__line--tright {
     position: absolute;
     right: 0;
     background-color: var(--saumon);
@@ -48,7 +50,25 @@
     margin: 10px auto 0 auto;
 }
 
-.article__line--left {
+.article__line--bleft {
+    position: absolute;
+    left: 0;
+    background-color: var(--saumon);
+    height: 10px;
+    width: 40%;
+    margin: 0 auto 0 auto;
+}
+
+.article__line--bright {
+    position: absolute;
+    right: 0;
+    background-color: var(--saumon);
+    height: 10px;
+    width: 27%;
+    margin: -10px auto 0 auto;
+}
+
+.article__line--tleft {
     position: absolute;
     left: 0;
     background-color: var(--saumon);
@@ -63,6 +83,10 @@
 
 .article__bg--blue {
     background-color: var(--bleu);
+}
+
+.article__bg--saumon {
+    background-color: var(--saumon);
 }
 
 .article__list {
