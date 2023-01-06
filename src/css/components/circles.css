@@ -8,11 +8,11 @@
     align-items: center;
 }
 
-.circles--middlespaced {
+/* .circles--middlespaced {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-}
+} */
 
 .circles--cornerright {
     display: flex;
