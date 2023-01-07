@@ -36,6 +36,33 @@
     /* padding: 5px 18px 0 0; */
 }
 
+.circles--harmonized {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    margin-bottom: -20px;
+    margin-top: 30px;
+}
+
+.circles__col {
+    display: flex;
+    align-items: center;
+}
+
+.circles__col--one {
+    place-content: start;
+    margin-left: 10px;
+}
+
+.circles__col--two {
+    place-content: center;
+}
+
+.circles__col--three {
+    place-content: end;
+    margin-right: 10px;
+}
+
 .circles--cornerright > .circle--l {
     margin-top: 5px;
     margin-right: 7px;
@@ -90,6 +117,11 @@
 }
 
 .circle--l {
+    height: 25px;
+    width: 25px;
+}
+
+.circle--xl {
     height: 25px;
     width: 25px;
 }

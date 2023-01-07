@@ -34,6 +34,13 @@
     margin-right: 20px;
 }
 
+.article__line--middless {
+    background-color: var(--bleu);
+    height: 5px;
+    width: 26%;
+    margin: 30px auto 30px auto;
+}
+
 .article__line--middles {
     background-color: var(--bleu);
     height: 5px;
