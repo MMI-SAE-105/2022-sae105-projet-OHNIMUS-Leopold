@@ -41,6 +41,14 @@
     
 } */
 
+/* .article__gallerie {
+
+} */
+
+/* .article__oeuvres {
+
+} */
+
 .article__subtitle {
     margin-bottom: 10px;
     margin-top: 30px;
@@ -112,12 +120,30 @@
     margin: -10px auto 0 auto;
 }
 
+.article__line--brightbig {
+    position: absolute;
+    right: 0;
+    background-color: var(--saumon);
+    height: 10px;
+    width: 40%;
+    margin: -10px auto 0 auto;
+}
+
 .article__line--tleft {
     position: absolute;
     left: 0;
     background-color: var(--saumon);
     height: 10px;
     width: 40%;
+    margin: 0 auto 0 auto;
+}
+
+.article__line--tleftsmall {
+    position: absolute;
+    left: 0;
+    background-color: var(--saumon);
+    height: 10px;
+    width: 27%;
     margin: 0 auto 0 auto;
 }
 

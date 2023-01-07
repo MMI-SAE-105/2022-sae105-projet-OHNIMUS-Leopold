@@ -94,7 +94,7 @@
         <h1 class="article__title">
             Filmographie de<br>Kim Hee Won
         </h1>
-        <div class="article__accroche accroche">
+        <section class="article__accroche accroche">
             <div class="accroche__onside">
                 <h2 class="accroche__subtitle">
                     La réalisatrice
@@ -110,16 +110,46 @@
                     Kim Hee Won
                 </figcaption>
             </figure>
-        </div>
+        </section>
 
-        <div class="article__line--tleft article__bg--blue"></div>
+        <div class="article__line--tleftsmall"></div>
 
-        <h2 class="article__subtitle">
-            Ses œuvres
-        </h2>
-        <div></div>
+        <section class="article__gallerie">
+            <h2 class="article__subtitle">
+                Ses œuvres
+            </h2>
+            <div class="article__oeuvres oeuvres" x-data="{card1: false, card2: false}">
+                <div class="oeuvres__info">
+                    <div class="oeuvres__container oeuvres__container--un">
+                        <div class="oeuvres__card" :class="{flip:card1}">
+                            <div class="oeuvres__side oeuvres__side--front">
+                                <img class="oeuvres__side--img" src="../public/img/articles/filmography/come_come_absolutely_come.webp" alt="">
+                            </div>
+                            <div class="oeuvres__side oeuvres__side--back">feiufezb</div>
+                        </div>
+                    </div>
+                    <p class="oeuvres__title"></p>
+                    <button @click="card1 = ! card1; card2 = false" class="oeuvres__seemore" aria-label="ouvrir les informations">
+                        <img src="../public/icons/card/eye.svg" alt="ouvrir les informations">
+                    </button>
+                </div>
 
-        <div class="article__line--bright article__bg--blue"></div>
+
+
+
+
+
+                
+                <div>
+                    dezdiulebzfiubfzlui
+                </div>
+                <div>
+                    dezdiulebzfiubfzlui
+                </div>
+            </div>
+        </section>
+
+        <div class="article__line--brightbig"></div>
 
     </article>
 
