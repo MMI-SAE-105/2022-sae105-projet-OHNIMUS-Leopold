@@ -109,3 +109,7 @@
 .nextarticle__cover--regret {
     max-width: 292px;
 }
+
+.nextarticle__cover--place {
+    max-width: 240px;
+}
