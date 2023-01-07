@@ -44,6 +44,14 @@
     margin-bottom: 10px;
 }
 
+.nextarticle__line--inv {
+    height: 5px;
+    width: 40%;
+    margin-top: 5px;
+    /* margin-bottom: 10px; */
+    float: right;
+}
+
 .nextarticle__title {
     font-family: var(--sans-serif);
     font-size: var(--button);
@@ -51,6 +59,16 @@
     color: var(--blanc-casse);
     margin: 0;
     margin-left: 18px;
+}
+
+.nextarticle__title--spaced {
+    font-family: var(--sans-serif);
+    font-size: var(--button);
+    font-weight: var(--semi-bold);
+    color: var(--blanc-casse);
+    margin: 0;
+    margin-left: 18px;
+    margin-top: 17px;
 }
 
 .nextarticle__text {
@@ -86,4 +104,8 @@
 
 .nextarticle__cover--music {
     max-width: 210px;
+}
+
+.nextarticle__cover--regret {
+    max-width: 292px;
 }
