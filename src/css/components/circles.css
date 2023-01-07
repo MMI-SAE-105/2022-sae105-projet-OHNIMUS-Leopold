@@ -8,6 +8,13 @@
     align-items: center;
 }
 
+.circles--middlespbtw {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 29px 30px 29px;
+}
+
 .circles--middlespaceds {
     display: flex;
     justify-content: center;
