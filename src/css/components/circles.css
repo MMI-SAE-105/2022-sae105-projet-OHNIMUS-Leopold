@@ -15,12 +15,12 @@
     gap: 20px;
 }
 
-/* .circles--middlespacedm {
+.circles--middlespacedm {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
-} */
+}
 
 .circles--middlespacedl {
     margin-top: 30px;
