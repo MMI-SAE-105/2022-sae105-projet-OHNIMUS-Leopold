@@ -11,7 +11,30 @@
 }
 
 .article__accroche {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+}
+
+.accroche {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.accroche__onside {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+}
+
+.accroche__subtitle {
+    margin-bottom: 10px;
+}
+
+.accroche__text {
+    margin-right: 20px;
+}
+
+.accroche__illustration {
+    margin-bottom: 0px;
 }
 
 /* .article__illustration {

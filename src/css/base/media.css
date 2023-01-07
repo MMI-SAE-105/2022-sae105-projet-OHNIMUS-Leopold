@@ -8,6 +8,11 @@
     max-width: 750px;
 }
 
+.accroche__illustration > .illustration__img {
+    width: 100%;
+    max-width: 318px;
+}
+
 .illustration__caption {
     font-family: var(--sans-serif);
     font-size: var(--small-text);
