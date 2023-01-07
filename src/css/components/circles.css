@@ -8,11 +8,27 @@
     align-items: center;
 }
 
-/* .circles--middlespaced {
+.circles--middlespaceds {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    gap: 20px;
+}
+
+/* .circles--middlespacedm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 } */
+
+.circles--middlespacedl {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
 
 .circles--cornerright {
     display: flex;
