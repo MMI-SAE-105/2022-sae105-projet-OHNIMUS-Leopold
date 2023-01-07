@@ -1,14 +1,18 @@
 .oeuvres {
     display: grid;
+    justify-items: center;
     gap: 40px;
-    width: 73%;
-    margin: auto;
+    /* width: 73%; */
+    width: 100%;
+    margin-top: 20px;
     grid-auto-flow: row dense;
     grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
 }
 
 .oeuvres__info {
-    margin-bottom: 100px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
 }
 
 .oeuvres__container {
@@ -55,4 +59,18 @@
 .oeuvres__side--back {
     background-color: var(--noir-nuit);
     transform: rotateY(180deg);
+}
+
+.oeuvres__title {
+    margin: 10px auto 5px auto;
+}
+
+.oeuvres__seemore {
+    display: contents;
+}
+
+.oeuvres__seemore--icon {
+    width: 24px;
+    height: 24px;
+    margin: auto;
 }
