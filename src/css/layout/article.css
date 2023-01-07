@@ -34,11 +34,25 @@
     margin-right: 20px;
 }
 
+.article__line--middles {
+    background-color: var(--bleu);
+    height: 5px;
+    width: 29%;
+    margin: 30px auto -28px auto;
+}
+
 .article__line--middle {
     background-color: var(--saumon);
     height: 5px;
     width: 40%;
     margin: 0 auto 20px auto;
+}
+
+.article__line--middlel {
+    background-color: var(--bleu);
+    height: 5px;
+    width: 48%;
+    margin: 20px auto -30px auto;
 }
 
 .article__line--tright {
