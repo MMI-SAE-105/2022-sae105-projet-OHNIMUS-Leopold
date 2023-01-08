@@ -20,3 +20,7 @@
     color: var(--noir-nuit);
     margin: 6px 20px 0 20px;
 }
+
+.diffusion {
+    width: 100%;
+}
