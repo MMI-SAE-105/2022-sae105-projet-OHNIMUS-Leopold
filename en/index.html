@@ -110,68 +110,68 @@
                     </div>
                 </div>
             </div>
-            <p class="home__title">Toi, qui est passionné par la Corée ! Laisse toi guider par ce site et approfondi ta connaissance de ce pays et de sa culture !</p>
+            <p class="home__title">You, who are passionate about Korea! Let yourself be guided by this site and deepen your knowledge of this country and this culture!</p>
         </section>
         <section class="articles">
-            <h1 class="articles__title">Les articles</h1>
+            <h1 class="articles__title">Articles</h1>
         
             <div class="articles__carrousel carrousel" x-data="{hrefCourant: '#card-1',}">
-                <button aria-label="previousSlide" class="carrousel__button carrousel__button--prv"><img @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" class="carrousel__button--img" src="../public/icons/carrousel/chevron-left.svg" alt="article précédent"></button>
-                <button aria-label="nextSlide" class="carrousel__button carrousel__button--nxt"><img @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" class="carrousel__button--img" src="../public/icons/carrousel/chevron-right.svg" alt="article suivant"></button>
+                <button aria-label="previousSlide" class="carrousel__button carrousel__button--prv"><img @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" class="carrousel__button--img" src="../public/icons/carrousel/chevron-left.svg" alt="previous article"></button>
+                <button aria-label="nextSlide" class="carrousel__button carrousel__button--nxt"><img @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" class="carrousel__button--img" src="../public/icons/carrousel/chevron-right.svg" alt="next article"></button>
         
                 <div class="carrousel__track" x-ref="parent" @scroll.debounce.50ms.passive="
                 hrefCourant = '#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
                     <div id="card-1" class="carrousel__card card card--red">
-                        <img class="card__img" src="../public/img/home/place.webp" alt="article lieu">
+                        <img class="card__img" src="../public/img/home/place.webp" alt="place article">
                         <div class="card__caption caption">
-                            <h2 class="caption__title">Un lieu</h2>
-                            <a class="caption__link" href="./lieu.html"><img class="caption__icon" src="../public/icons/carrousel/arrow-right.svg" alt="voir l'article"></a>
-                            <p class="caption__text">À la découverte d'un lieu magnifique : le temple Haedong Yonggungsa</p>
+                            <h2 class="caption__title">A place</h2>
+                            <a class="caption__link" href="./lieu.html"><img class="caption__icon" src="../public/icons/carrousel/arrow-right.svg" alt="see the article"></a>
+                            <p class="caption__text">Discovering a magnificent place: the Haedong Yonggungsa Temple</p>
                         </div>
                     </div>
         
                     <div id="card-2" class="carrousel__card card card--white">
-                        <img class="card__img" src="../public/img/home/book.webp" alt="article livre">
+                        <img class="card__img" src="../public/img/home/book.webp" alt="book article">
                         <div class="card__caption caption">
-                            <h2 class="caption__title">Un livre</h2>
-                            <a class="caption__link" href="./livre.html"><img class="caption__icon" src="../public/icons/carrousel/arrow-right.svg" alt="voir l'article"></a>
-                            <p class="caption__text">"Corées, Enfin la paix ?"<br>Un regard sur les femmes de réconfort</p>
+                            <h2 class="caption__title">A book</h2>
+                            <a class="caption__link" href="./livre.html"><img class="caption__icon" src="../public/icons/carrousel/arrow-right.svg" alt="see the article"></a>
+                            <p class="caption__text">"Corées, Enfin la paix ?"<br>A Look at Comfort Women</p>
                         </div>
                     </div>
         
                     <div id="card-3" class="carrousel__card card card--black">
-                        <img class="card__img" src="../public/img/home/hope.webp" alt="article espoir">
+                        <img class="card__img" src="../public/img/home/hope.webp" alt="hope article">
                         <div class="card__caption caption">
-                            <h2 class="caption__title">Un espoir</h2>
-                            <a class="caption__link" href="./espoir.html"><img class="caption__icon" src="../public/icons/carrousel/arrow-right-yellow.svg" alt="voir l'article"></a>
-                            <p class="caption__text">Une société de moins en moins patriarcale et qui s'ouvre au monde</p>
+                            <h2 class="caption__title">A hope</h2>
+                            <a class="caption__link" href="./espoir.html"><img class="caption__icon" src="../public/icons/carrousel/arrow-right-yellow.svg" alt="see the article"></a>
+                            <p class="caption__text">A society less and less patriarchal and open to the world</p>
                         </div>
                     </div>
         
                     <div id="card-4" class="carrousel__card card card--red">
-                        <img class="card__img" src="../public/img/home/series.webp" alt="article série">
+                        <img class="card__img" src="../public/img/home/series.webp" alt="series article">
                         <div class="card__caption caption">
-                            <h2 class="caption__title">Une série</h2>
-                            <a class="caption__link" href="./serie.html"><img class="caption__icon" src="../public/icons/carrousel/arrow-right.svg" alt="voir l'article"></a>
-                            <p class="caption__text">Une série remarquable<br>"Vincenzo"</p>
+                            <h2 class="caption__title">A serie</h2>
+                            <a class="caption__link" href="./serie.html"><img class="caption__icon" src="../public/icons/carrousel/arrow-right.svg" alt="see the article"></a>
+                            <p class="caption__text">A remarkable serie<br>"Vincenzo"</p>
                         </div>
                     </div>
         
                     <div id="card-5" class="carrousel__card card card--yellow">
-                        <img class="card__img" src="../public/img/home/music.webp" alt="article musique">
+                        <img class="card__img" src="../public/img/home/music.webp" alt="song article">
                         <div class="card__caption caption">
-                            <h2 class="caption__title">Une musique</h2>
-                            <a class="caption__link" href="./musique.html"><img class="caption__icon" src="../public/icons/carrousel/arrow-right.svg" alt="voir l'article"></a>
-                            <p class="caption__text">"Egoist"<br>Une musique d'Olivia Hye</p>
+                            <h2 class="caption__title">A song</h2>
+                            <a class="caption__link" href="./musique.html"><img class="caption__icon" src="../public/icons/carrousel/arrow-right.svg" alt="see the article"></a>
+                            <p class="caption__text">"Egoist"<br>Music by Olivia Hye</p>
                         </div>
                     </div>
         
                     <div id="card-6" class="carrousel__card card card--blue">
-                        <img class="card__img" src="../public/img/home/regret.webp" alt="article regret">
+                        <img class="card__img" src="../public/img/home/regret.webp" alt="regret article">
                         <div class="card__caption caption">
-                            <h2 class="caption__title">Un regret</h2>
-                            <a class="caption__link" href="./regret.html"><img class="caption__icon" src="../public/icons/carrousel/arrow-right.svg" alt="voir l'article"></a>
-                            <p class="caption__text">Un de mes grands regrets<br>La pollution générée par l'industrie de la K-POP</p>
+                            <h2 class="caption__title">A regret</h2>
+                            <a class="caption__link" href="./regret.html"><img class="caption__icon" src="../public/icons/carrousel/arrow-right.svg" alt="see the article"></a>
+                            <p class="caption__text">One of my big regrets<br>The pollution generated by the K-POP industry</p>
                         </div>
                     </div>
                 </div>
@@ -185,8 +185,8 @@
                 </div>
             </div>
             <div class="articles__buttons">
-                <a class="articles__button button" href="./glossaire.html">Glossaire</a>
-                <a class="articles__button button" href="./projets.html">Autres projets</a>
+                <a class="articles__button button" href="./glossaire.html">Glossary</a>
+                <a class="articles__button button" href="./projets.html">Other projects</a>
             </div>
         </section>
     </main>
