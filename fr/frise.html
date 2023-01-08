@@ -10,7 +10,311 @@
     <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body>
+
+<body x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
     
+    <header class="header">
+        <a href="./index.html"><img class="header__logo" src="../public/icons/logo.webp" alt="logo du site"></a>
+        <p class="header__title">Korean Notes</p>
+        <div class="header__menu menu">
+            <button aria-controls="mainMenu" class="menu__icon--button" @click="menuIsOpen = ! menuIsOpen"><img class="menu__icon" src="../public/icons/menu/menu.svg" alt="ouvrir menu"></button>
+            
+            <div id="mainMenu" class="menu__open" x-show="menuIsOpen" x-data="{articlesAreOpen: false, othersAreOpen: false}">
+                
+                <div class="menu__header">
+                    <img class="menu__lang" src="../public/icons/menu/globe.svg" alt="changer de langue">
+                    <p class="menu__title">Menu</p>
+                    <button aria-controls="mainMenu" class="menu__close--button" @click="menuIsOpen = ! menuIsOpen"><img class="menu__close" src="../public/icons/menu/black-cross.svg" alt="fermer menu"></button>
+                </div>
+
+                <span class="menu__bar"></span>
+                
+                <nav class="menu__nav">
+                    <ul class="menu__section"><button aria-controls="navArticles" @click="articlesAreOpen = ! articlesAreOpen; othersAreOpen = false" class="menu__section--button">Mes articles</button>
+                        <div id="navArticles" class="menu__list" x-show="articlesAreOpen" x-transition.duration.200ms>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./lieu.html">Temple Haedong Yonggungsa</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./livre.html">"Corées, Enfin la paix ?" Un regard sur les femmes de réconfort</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./espoir.html">Une société sud-coréenne de moins en moins patriarcale et qui s'ouvre au monde</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./serie.html">Une série remarquable "Vincenzo"</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./musique.html">"Egoist" Une musique d'Olivia Hye</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./regret.html">Un de mes grands regrets La pollution générée par l'industrie de la K-POP</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./glossaire.html">Glossaire</a>
+                            </li>
+                        </div>
+                    </ul>
+                    <ul class="menu__section"><button aria-controls="navOthers" @click="othersAreOpen = ! othersAreOpen; articlesAreOpen = false" class="menu__section--button">Voir plus</button>
+                        <div id="navOthers" class="menu__list" x-show="othersAreOpen" x-transition.duration.200ms>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./apropos.html">À propos</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./contact.html">Contact</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./projets.html">Autres projets</a>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+
+                <div class="menu__footer">
+                    <span class="menu__circle"></span>
+                    <span class="menu__circle"></span>
+                    <span class="menu__circle"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="frise">
+
+        <section class="frise__head">
+            <h1 class="frise__title">
+                Évolution des temples coréens
+            </h1>
+            <p class="frise__text">
+                Voici une frise des temples que je considère comme les plus beaux de Corée.
+            </p>
+        </section>
+
+        <div class="frise__timeline">
+            <div class="frise__temple temple">
+                <div class="temple__date">
+                    <p class="temple__date--txt bg--bleunoir">
+                        528
+                    </p>
+                </div>
+                <div class="temple__nom">
+                    <p class="temple__nom-txt">
+                        Temple Bulguksa
+                    </p>
+                </div>
+                <div class="temple__photo">
+                    <img class="temple__img" src="../public/img/articles/timeline/bulguksa_temple.webp" alt="Temple Bulguksa">
+                </div>
+            </div>
+
+            <div class="frise__temple temple">
+                <div class="temple__photo">
+                    <img class="temple__img" src="../public/img/articles/timeline/beopjusa_temple.webp" alt="Temple Beopjusa">
+                </div>
+                <div class="temple__nom">
+                    <p class="temple__nom-txtinv">
+                        Temple Beopjusa
+                    </p>
+                </div>
+                <div class="temple__date">
+                    <p class="temple__date--txt bg--blancnoir">
+                        553
+                    </p>
+                </div>
+            </div>
+
+            <div class="frise__temple temple">
+                <div class="temple__date">
+                    <p class="temple__date--txt bg--rougenoir">
+                        646
+                    </p>
+                </div>
+                <div class="temple__nom">
+                    <p class="temple__nom-txt">
+                        Temple Tongdosa
+                    </p>
+                </div>
+                <div class="temple__photo">
+                    <img class="temple__img" src="../public/img/articles/timeline/tongdosa_temple.webp" alt="Temple Tongdosa">
+                </div>
+            </div>
+
+            <div class="frise__temple temple">
+                <div class="temple__photo">
+                    <img class="temple__img" src="../public/img/articles/timeline/ssanggyesa_temple.webp" alt="Temple Ssanggyesa">
+                </div>
+                <div class="temple__nom">
+                    <p class="temple__nom-txtinv">
+                        Temple Ssang-gyesa
+                    </p>
+                </div>
+                <div class="temple__date">
+                    <p class="temple__date--txt bg--noirjaune">
+                        722
+                    </p>
+                </div>
+            </div>
+
+            <div class="frise__temple temple">
+                <div class="temple__date">
+                    <p class="temple__date--txt bg--bleunoir">
+                        794
+                    </p>
+                </div>
+                <div class="temple__nom">
+                    <p class="temple__nom-txt">
+                        Temple Bongeun-sa
+                    </p>
+                </div>
+                <div class="temple__photo">
+                    <img class="temple__img" src="../public/img/articles/timeline/bongeunsa_temple.webp" alt="Temple Bongeunsa">
+                </div>
+            </div>
+
+            <div class="frise__temple temple">
+                <div class="temple__photo">
+                    <img class="temple__img" src="../public/img/articles/timeline/haeinsa_temple.webp" alt="Temple Haeinsa">
+                </div>
+                <div class="temple__nom">
+                    <p class="temple__nom-txtinv">
+                        Temple Haeinsa
+                    </p>
+                </div>
+                <div class="temple__date">
+                    <p class="temple__date--txt bg--jaunenoir">
+                        802
+                    </p>
+                </div>
+            </div>
+
+            <div class="frise__temple temple">
+                <div class="temple__date">
+                    <p class="temple__date--txt bg--rougenoir">
+                        1195
+                    </p>
+                </div>
+                <div class="temple__nom">
+                    <p class="temple__nom-txt">
+                        Temple Hyangiram
+                    </p>
+                </div>
+                <div class="temple__photo">
+                    <img class="temple__img" src="../public/img/articles/timeline/hyangiram_temple.webp" alt="Temple Hyangiram">
+                </div>
+            </div>
+
+            <div class="frise__temple temple">
+                <div class="temple__photo">
+                    <img class="temple__img" src="../public/img/articles/timeline/haedong_yonggungsa_temple.webp" alt="Temple Haedong Yonggungsa">
+                </div>
+                <div class="temple__nom">
+                    <p class="temple__nom-txtinv">
+                        Temple Haedong Yong-gungsa
+                    </p>
+                </div>
+                <div class="temple__date">
+                    <p class="temple__date--txt bg--noirjaune">
+                        1376
+                    </p>
+                </div>
+            </div>
+
+            <div class="frise__temple temple">
+                <div class="temple__date">
+                    <p class="temple__date--txt bg--blancnoir">
+                        1885
+                    </p>
+                </div>
+                <div class="temple__nom">
+                    <p class="temple__nom-txt">
+                        Temple Tapsa
+                    </p>
+                </div>
+                <div class="temple__photo">
+                    <img class="temple__img" src="../public/img/articles/timeline/tapsa_temple.webp" alt="Temple Tapsa">
+                </div>
+            </div>
+
+            <div class="frise__temple temple">
+                <div class="temple__photo">
+                    <img class="temple__img" src="../public/img/articles/timeline/guinsa_temple.webp" alt="Temple Guinsa">
+                </div>
+                <div class="temple__nom">
+                    <p class="temple__nom-txtinv">
+                        Temple Guinsa
+                    </p>
+                </div>
+                <div class="temple__date">
+                    <p class="temple__date--txt bg--jaunenoir">
+                        1945
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="article__morecontent">
+            <p class="article__text">
+                Pour en apprendre plus sur le temple Haedong Yonggungsa
+            </p>
+            <a  class="article__link button__border-b" href="./lieu.html">
+                Cliquez-ici !
+            </a>
+        </div>
+
+        <div class="article__nextarticle nextarticle">
+            <a class="nextarticle__link" href="./livre.html">
+                <div class="nextarticle__component">
+                    <div class="nextarticle__side nextarticle__side--left">
+                        <div class="nextarticle__circles circles circles--cornerright">
+                            <div class="circle circle--m article__bg--blue"></div>
+                            <div class="circle circle--s article__bg--blue"></div>
+                        </div>
+                        <p class="nextarticle__title">
+                            Article suivant
+                        </p>
+                        <p class="nextarticle__text">
+                            Présentation d'un ouvrage : <br>"Corées, Enfin la paix ?"
+                        </p>
+                    </div>
+                    <div class="nextarticle__side nextarticle__side--right">
+                        <img class="nextarticle__cover nextarticle__cover--book" src="../public/img/articles/place/book.webp" alt="article livre">
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="tothetop">
+            <a class="tothetop__img--link" href="#">
+                <img class="tothetop__img" src="../public/icons/up-arrow.svg" alt="go to the top of the page">
+            </a>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer__name">Léopold OHNIMUS GR-B2</p>
+        <span class="footer__bar"></span>
+        <a class="footer__mail" href="mailto:leopold.ohnimus02@orange.fr">leopold.ohnimus02@orange.fr</a>
+        <div class="footer__options">
+            <a class="footer__link button" href="./apropos.html">À propos</a>
+            <a class="footer__link button" href="./contact.html">Contact</a>
+        </div>
+        <p class="footer__legal">
+            Projet réalisé dans le cadre d'un exercice pédagogique au
+            <a class="footer__legal--link" href="http://mmimontbeliard.com/">Département MMI de Montbéliard</a>.
+        </p>
+    </footer>
+
 </body>
 </html>

@@ -1,0 +1,114 @@
+/* .frise {
+
+} */
+
+.frise__head {
+    margin: 30px 20px auto 20px;
+    text-align: center;
+}
+
+/* .frise__title {
+
+} */
+
+.frise__text {
+    margin-top: 20px;
+}
+
+.frise__timeline {
+    margin: 30px 20px -10px 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.frise__temple {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    margin-top: 10px;
+}
+
+/* .temple {
+
+} */
+
+.temple__date,
+.temple__nom {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.temple__date {
+    grid-column: span 1 / span 1;
+}
+
+.temple__date--txt {
+    font-family: var(--sans-serif);
+    font-size: var(--button);
+    font-weight: var(--semi-bold);
+    /* color: var(--blanc-casse);
+    background-color: var(--noir-nuit); */
+    border: 1px solid var(--noir-nuit);
+    border-radius: 10px;
+    padding: 4px 8px 4px 8px;
+    margin-left: 4px;
+    margin-right: 4px;
+    text-decoration: none;
+}
+
+.temple__nom {
+    grid-column: span 1 / span 1;
+}
+
+.temple__nom-txt {
+    font-family: var(--sans-serif);
+    font-size: var(--small-text);
+    font-weight: var(--regular);
+    color: var(--noir-nuit);
+    margin: 0;
+    margin-left: 14px;
+}
+
+.temple__nom-txtinv {
+    font-family: var(--sans-serif);
+    font-size: var(--small-text);
+    font-weight: var(--regular);
+    color: var(--noir-nuit);
+    margin: 0;
+    margin-right: 14px;
+}
+
+.temple__photo {
+    grid-column: span 3 / span 3;
+}
+
+.temple__img {
+    width: 80%;
+    max-width: 378px;
+    border-radius: 5px;
+}
+
+.bg--bleunoir {
+    background-color: var(--bleu);
+    color: var(--noir-nuit);
+}
+
+.bg--blancnoir {
+    background-color: var(--blanc-casse);
+    color: var(--noir-nuit);
+}
+
+.bg--rougenoir {
+    background-color: var(--saumon);
+    color: var(--noir-nuit);
+}
+
+.bg--noirjaune {
+    background-color: var(--noir-nuit);
+    color: var(--jaune);
+}
+
+.bg--jaunenoir {
+    background-color: var(--jaune);
+    color: var(--noir-nuit);
+}
