@@ -125,6 +125,7 @@
 
 .oeuvres__side--link {
     margin-left: 50px;
+    cursor: pointer;
 }
 
 .oeuvres__title {

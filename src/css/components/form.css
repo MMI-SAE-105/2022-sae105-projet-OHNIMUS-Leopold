@@ -55,6 +55,7 @@
 .form__button {
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
 }
 
 .form__input, 
