@@ -14,67 +14,67 @@
 <body x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
 
     <header class="header">
-        <a href="./index.html"><img class="header__logo" src="../public/icons/logo.webp" alt="logo du site"></a>
+        <a href="./index.html"><img class="header__logo" src="../public/icons/logo.webp" alt="website logo"></a>
         <p class="header__title">Korean Notes</p>
         <div class="header__menu menu">
-            <button aria-controls="mainMenu" class="menu__icon--button" @click="menuIsOpen = ! menuIsOpen"><img class="menu__icon" src="../public/icons/menu/menu.svg" alt="ouvrir menu"></button>
+            <button aria-controls="mainMenu" class="menu__icon--button" @click="menuIsOpen = ! menuIsOpen"><img class="menu__icon" src="../public/icons/menu/menu.svg" alt="open menu"></button>
             
             <div id="mainMenu" class="menu__open" x-show="menuIsOpen" x-data="{articlesAreOpen: false, othersAreOpen: false}">
                 
                 <div class="menu__header">
-                    <img class="menu__lang" src="../public/icons/menu/globe.svg" alt="changer de langue">
+                    <img class="menu__lang" src="../public/icons/menu/globe.svg" alt="change langage">
                     <p class="menu__title">Menu</p>
-                    <button aria-controls="mainMenu" class="menu__close--button" @click="menuIsOpen = ! menuIsOpen"><img class="menu__close" src="../public/icons/menu/black-cross.svg" alt="fermer menu"></button>
+                    <button aria-controls="mainMenu" class="menu__close--button" @click="menuIsOpen = ! menuIsOpen"><img class="menu__close" src="../public/icons/menu/black-cross.svg" alt="close menu"></button>
                 </div>
 
                 <span class="menu__bar"></span>
                 
                 <nav class="menu__nav">
-                    <ul class="menu__section"><button aria-controls="navArticles" @click="articlesAreOpen = ! articlesAreOpen; othersAreOpen = false" class="menu__section--button">Mes articles</button>
+                    <ul class="menu__section"><button aria-controls="navArticles" @click="articlesAreOpen = ! articlesAreOpen; othersAreOpen = false" class="menu__section--button">My articles</button>
                         <div id="navArticles" class="menu__list" x-show="articlesAreOpen" x-transition.duration.200ms>
                             <li class="menu__item">
-                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
-                                <a class="menu__link" href="./lieu.html">Temple Haedong Yonggungsa</a>
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="dot">
+                                <a class="menu__link" href="./lieu.html">Haedong Yonggungsa Temple</a>
                             </li>
                             <li class="menu__item">
-                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
-                                <a class="menu__link" href="./livre.html">"Corées, Enfin la paix ?" Un regard sur les femmes de réconfort</a>
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="dot">
+                                <a class="menu__link" href="./livre.html">"Corées, Enfin la paix ?" A look at comfort women</a>
                             </li>
                             <li class="menu__item">
-                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
-                                <a class="menu__link" href="./espoir.html">Une société sud-coréenne de moins en moins patriarcale et qui s'ouvre au monde</a>
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="dot">
+                                <a class="menu__link" href="./espoir.html">A south-Korean society less and less patriarchal and open to the world</a>
                             </li>
                             <li class="menu__item">
-                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
-                                <a class="menu__link" href="./serie.html">Une série remarquable "Vincenzo"</a>
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="dot">
+                                <a class="menu__link" href="./serie.html">A remarkable serie "Vincenzo"</a>
                             </li>
                             <li class="menu__item">
-                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
-                                <a class="menu__link" href="./musique.html">"Egoist" Une musique d'Olivia Hye</a>
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="dot">
+                                <a class="menu__link" href="./musique.html">"Egoist" Music by Olivia Hye</a>
                             </li>
                             <li class="menu__item">
-                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
-                                <a class="menu__link" href="./regret.html">Un de mes grands regrets La pollution générée par l'industrie de la K-POP</a>
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="dot">
+                                <a class="menu__link" href="./regret.html">One of my big regrets : The pollution generated by the K-POP industry</a>
                             </li>
                             <li class="menu__item">
-                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
-                                <a class="menu__link" href="./glossaire.html">Glossaire</a>
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="dot">
+                                <a class="menu__link" href="./glossaire.html">Glossary</a>
                             </li>
                         </div>
                     </ul>
-                    <ul class="menu__section"><button aria-controls="navOthers" @click="othersAreOpen = ! othersAreOpen; articlesAreOpen = false" class="menu__section--button">Voir plus</button>
+                    <ul class="menu__section"><button aria-controls="navOthers" @click="othersAreOpen = ! othersAreOpen; articlesAreOpen = false" class="menu__section--button">See more</button>
                         <div id="navOthers" class="menu__list" x-show="othersAreOpen" x-transition.duration.200ms>
                             <li class="menu__item">
-                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
-                                <a class="menu__link" href="./apropos.html">À propos</a>
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="dot">
+                                <a class="menu__link" href="./apropos.html">About</a>
                             </li>
                             <li class="menu__item">
-                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="dot">
                                 <a class="menu__link" href="./contact.html">Contact</a>
                             </li>
                             <li class="menu__item">
-                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
-                                <a class="menu__link" href="./projets.html">Autres projets</a>
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="dot">
+                                <a class="menu__link" href="./projets.html">Other projects</a>
                             </li>
                         </div>
                     </ul>
