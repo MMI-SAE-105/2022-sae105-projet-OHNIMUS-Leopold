@@ -255,3 +255,29 @@ mark {
 .bg--blue {
     background-color: var(--bleu);
 }
+
+/* .p404 {
+
+} */
+
+.p404__section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 50px 20px 0 20px;
+}
+
+.p404__title {
+    text-align: center;
+}
+
+.p404__text {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.p404__link {
+    margin-left: auto;
+    margin-right: auto;
+}
