@@ -89,313 +89,299 @@
         </div>
     </header>
     
-    <article class="article">
-
-        <h1 class="article__title">
-            Filmographie de<br>Kim Hee Won
-        </h1>
-
-        <section class="article__accroche accroche">
-            <div class="accroche__onside">
-                <h2 class="accroche__subtitle">
-                    La réalisatrice
+    <main>
+        <article class="article">
+            <h1 class="article__title">
+                Filmographie de<br>Kim Hee Won
+            </h1>
+            <section class="article__accroche accroche">
+                <div class="accroche__onside">
+                    <h2 class="accroche__subtitle">
+                        La réalisatrice
+                    </h2>
+                    <p class="accroche__text">
+                        Kim Hee Won a réalisé plusieurs films et séries durant sa carrière avant d'avoir sorti la série Vincenzo.<br>
+                        Elle continue d'ailleurs toujours d'en réaliser.
+                    </p>
+                </div>
+                <figure class="accroche__illustration illustration">
+                    <img class="illustration__img" src="../public/img/articles/filmography/kim_hee_won.webp" alt="Kim Hee Won">
+                    <figcaption class="illustration__caption">
+                        Kim Hee Won
+                    </figcaption>
+                </figure>
+            </section>
+            <div class="article__line--tleftsmall"></div>
+            <section class="article__gallerie">
+                <h2 class="article__subtitle">
+                    Ses œuvres
                 </h2>
-                <p class="accroche__text">
-                    Kim Hee Won a réalisé plusieurs films et séries durant sa carrière avant d'avoir sorti la série Vincenzo.<br>
-                    Elle continue d'ailleurs toujours d'en réaliser.
-                </p>
-            </div>
-            <figure class="accroche__illustration illustration">
-                <img class="illustration__img" src="../public/img/articles/filmography/kim_hee_won.webp" alt="Kim Hee Won">
-                <figcaption class="illustration__caption">
-                    Kim Hee Won
-                </figcaption>
-            </figure>
-        </section>
-
-        <div class="article__line--tleftsmall"></div>
-
-        <section class="article__gallerie">
-            <h2 class="article__subtitle">
-                Ses œuvres
-            </h2>
-
-            <div class="article__oeuvres oeuvres" x-data="{card1: false, card2: false, card3: false, card4: false, card5: false, card6: false, card7: false, card8: false}">
-                <div class="oeuvres__info">
-                    <div class="oeuvres__container oeuvres__container--un">
-                        <div class="oeuvres__card" :class="{flip:card1}">
-                            <div class="oeuvres__side oeuvres__side--front">
-                                <img class="oeuvres__side--img" src="../public/img/articles/filmography/come_come_absolutely_come.webp" alt="Come, Come, Absolutely Come">
-                            </div>
-                            <div class="oeuvres__side oeuvres__side--back">
-                                <p class="oeuvres__side--title">
-                                    "Come, Come, Absolutely Come"
-                                </p>
-                                <p class="oeuvres__side--infos">
-                                    Série sortie le 5 décembre 2011<br><br>
-                                    1 saison, 60 épisodes
-                                </p>
-                                <p class="oeuvres__side--resume">
-                                    Synopsis :<br><br>
-                                    Nous allons suivre les folles histoires de deux femmes : Bae Soo-Jin et Kim Sae-Bom, vivant sous le 
-                                    même toit qu'un homme : Ko Chan-Young.
-                                </p>
-                                <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="fermer les informations">
-                                    <img class="oeuvres__seemore--iconclose" src="../public/icons/card/white-cross.svg" alt="fermer les informations">
-                                </button>
+                <div class="article__oeuvres oeuvres" x-data="{card1: false, card2: false, card3: false, card4: false, card5: false, card6: false, card7: false, card8: false}">
+                    <div class="oeuvres__info">
+                        <div class="oeuvres__container oeuvres__container--un">
+                            <div class="oeuvres__card" :class="{flip:card1}">
+                                <div class="oeuvres__side oeuvres__side--front">
+                                    <img class="oeuvres__side--img" src="../public/img/articles/filmography/come_come_absolutely_come.webp" alt="Come, Come, Absolutely Come">
+                                </div>
+                                <div class="oeuvres__side oeuvres__side--back">
+                                    <p class="oeuvres__side--title">
+                                        "Come, Come, Absolutely Come"
+                                    </p>
+                                    <p class="oeuvres__side--infos">
+                                        Série sortie le 5 décembre 2011<br><br>
+                                        1 saison, 60 épisodes
+                                    </p>
+                                    <p class="oeuvres__side--resume">
+                                        Synopsis :<br><br>
+                                        Nous allons suivre les folles histoires de deux femmes : Bae Soo-Jin et Kim Sae-Bom, vivant sous le
+                                        même toit qu'un homme : Ko Chan-Young.
+                                    </p>
+                                    <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="fermer les informations">
+                                        <img class="oeuvres__seemore--iconclose" src="../public/icons/card/white-cross.svg" alt="fermer les informations">
+                                    </button>
+                                </div>
                             </div>
                         </div>
+                        <p class="oeuvres__title">"Come, Come, Absolutely Come"</p>
+                        <button @click="card1 = ! card1; card2 = false; card3 = false; card4 = false; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="ouvrir les informations">
+                            <img class="oeuvres__seemore--icon" src="../public/icons/card/eye.svg" alt="ouvrir les informations">
+                        </button>
                     </div>
-                    <p class="oeuvres__title">"Come, Come, Absolutely Come"</p>
-                    <button @click="card1 = ! card1; card2 = false; card3 = false; card4 = false; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="ouvrir les informations">
-                        <img class="oeuvres__seemore--icon" src="../public/icons/card/eye.svg" alt="ouvrir les informations">
-                    </button>
-                </div>
-
-                <div class="oeuvres__info">
-                    <div class="oeuvres__container oeuvres__container--deux">
-                        <div class="oeuvres__card" :class="{flip:card2}">
-                            <div class="oeuvres__side oeuvres__side--front">
-                                <img class="oeuvres__side--img" src="../public/img/articles/filmography/you_are_my_destiny.webp" alt="You Are My Destiny">
-                            </div>
-                            <div class="oeuvres__side oeuvres__side--back">
-                                <p class="oeuvres__side--title">
-                                    "You Are My Destiny"
-                                </p>
-                                <p class="oeuvres__side--infos">
-                                    Série sortie le 2 juillet 2014<br><br>
-                                    1 saison, 20 épisodes
-                                </p>
-                                <p class="oeuvres__side--resume">
-                                    Synopsis :<br><br>
-                                    Lee Gun, PDG d'une grande entreprise et Kim Mi-Young, une simple employée vont se retrouver, par 
-                                    hasard, à passer une nuit ensemble. Ce n'est que quelques semaines plus tard que Mi-Young va 
-                                    apprendre sa grossesse. Issus de deux milieux totalement différents, nos deux personnages vont 
-                                    devoir se résoudre à se marier : pour le meilleur, et pour le pire !
-                                </p>
-                                <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="fermer les informations">
-                                    <img class="oeuvres__seemore--iconclose" src="../public/icons/card/white-cross.svg" alt="fermer les informations">
-                                </button>
+                    <div class="oeuvres__info">
+                        <div class="oeuvres__container oeuvres__container--deux">
+                            <div class="oeuvres__card" :class="{flip:card2}">
+                                <div class="oeuvres__side oeuvres__side--front">
+                                    <img class="oeuvres__side--img" src="../public/img/articles/filmography/you_are_my_destiny.webp" alt="You Are My Destiny">
+                                </div>
+                                <div class="oeuvres__side oeuvres__side--back">
+                                    <p class="oeuvres__side--title">
+                                        "You Are My Destiny"
+                                    </p>
+                                    <p class="oeuvres__side--infos">
+                                        Série sortie le 2 juillet 2014<br><br>
+                                        1 saison, 20 épisodes
+                                    </p>
+                                    <p class="oeuvres__side--resume">
+                                        Synopsis :<br><br>
+                                        Lee Gun, PDG d'une grande entreprise et Kim Mi-Young, une simple employée vont se retrouver, par
+                                        hasard, à passer une nuit ensemble. Ce n'est que quelques semaines plus tard que Mi-Young va
+                                        apprendre sa grossesse. Issus de deux milieux totalement différents, nos deux personnages vont
+                                        devoir se résoudre à se marier : pour le meilleur, et pour le pire !
+                                    </p>
+                                    <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="fermer les informations">
+                                        <img class="oeuvres__seemore--iconclose" src="../public/icons/card/white-cross.svg" alt="fermer les informations">
+                                    </button>
+                                </div>
                             </div>
                         </div>
+                        <p class="oeuvres__title">"You Are My Destiny"</p>
+                        <button @click="card1 = false; card2 = ! card2; card3 = false; card4 = false; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="ouvrir les informations">
+                            <img class="oeuvres__seemore--icon" src="../public/icons/card/eye.svg" alt="ouvrir les informations">
+                        </button>
                     </div>
-                    <p class="oeuvres__title">"You Are My Destiny"</p>
-                    <button @click="card1 = false; card2 = ! card2; card3 = false; card4 = false; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="ouvrir les informations">
-                        <img class="oeuvres__seemore--icon" src="../public/icons/card/eye.svg" alt="ouvrir les informations">
-                    </button>
-                </div>
-
-                <div class="oeuvres__info">
-                    <div class="oeuvres__container oeuvres__container--trois">
-                        <div class="oeuvres__card" :class="{flip:card3}">
-                            <div class="oeuvres__side oeuvres__side--front">
-                                <img class="oeuvres__side--img" src="../public/img/articles/filmography/old_goodbye.webp" alt="Old Goodbye">
-                            </div>
-                            <div class="oeuvres__side oeuvres__side--back">
-                                <p class="oeuvres__side--title">
-                                    "Old Goodbye"
-                                </p>
-                                <p class="oeuvres__side--infos">
-                                    Film sorti le 9 novembre 2014
-                                </p>
-                                <p class="oeuvres__side--resume">
-                                    Synopsis :<br><br>
-                                    Soo-Hyuk, un ancien boxeur, apprend que son ex-femme est gravement malade. Quelques jours plus 
-                                    tard, en rangeant sa maison, il retrouve un appareil photo auquel elle tenait beaucoup...
-                                </p>
-                                <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="fermer les informations">
-                                    <img class="oeuvres__seemore--iconclose" src="../public/icons/card/white-cross.svg" alt="fermer les informations">
-                                </button>
+                    <div class="oeuvres__info">
+                        <div class="oeuvres__container oeuvres__container--trois">
+                            <div class="oeuvres__card" :class="{flip:card3}">
+                                <div class="oeuvres__side oeuvres__side--front">
+                                    <img class="oeuvres__side--img" src="../public/img/articles/filmography/old_goodbye.webp" alt="Old Goodbye">
+                                </div>
+                                <div class="oeuvres__side oeuvres__side--back">
+                                    <p class="oeuvres__side--title">
+                                        "Old Goodbye"
+                                    </p>
+                                    <p class="oeuvres__side--infos">
+                                        Film sorti le 9 novembre 2014
+                                    </p>
+                                    <p class="oeuvres__side--resume">
+                                        Synopsis :<br><br>
+                                        Soo-Hyuk, un ancien boxeur, apprend que son ex-femme est gravement malade. Quelques jours plus
+                                        tard, en rangeant sa maison, il retrouve un appareil photo auquel elle tenait beaucoup...
+                                    </p>
+                                    <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="fermer les informations">
+                                        <img class="oeuvres__seemore--iconclose" src="../public/icons/card/white-cross.svg" alt="fermer les informations">
+                                    </button>
+                                </div>
                             </div>
                         </div>
+                        <p class="oeuvres__title">"Old Goodbye"</p>
+                        <button @click="card1 = false; card2 = false; card3 = ! card3; card4 = false; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="ouvrir les informations">
+                            <img class="oeuvres__seemore--icon" src="../public/icons/card/eye.svg" alt="ouvrir les informations">
+                        </button>
                     </div>
-                    <p class="oeuvres__title">"Old Goodbye"</p>
-                    <button @click="card1 = false; card2 = false; card3 = ! card3; card4 = false; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="ouvrir les informations">
-                        <img class="oeuvres__seemore--icon" src="../public/icons/card/eye.svg" alt="ouvrir les informations">
-                    </button>
-                </div>
-
-                <div class="oeuvres__info">
-                    <div class="oeuvres__container oeuvres__container--quatre">
-                        <div class="oeuvres__card" :class="{flip:card4}">
-                            <div class="oeuvres__side oeuvres__side--front">
-                                <img class="oeuvres__side--img" src="../public/img/articles/filmography/money_flower.webp" alt="Money Flower">
-                            </div>
-                            <div class="oeuvres__side oeuvres__side--back">
-                                <p class="oeuvres__side--title">
-                                    "Money Flower"
-                                </p>
-                                <p class="oeuvres__side--infos">
-                                    Série sortie le 11 novembre 2017<br><br>
-                                    1 saison, 24 épisodes
-                                </p>
-                                <p class="oeuvres__side--resume">
-                                    Synopsis :<br><br>
-                                    Pour sauver son héritage familial, un puissant va contraindre son meilleur avocat, qui lui sert 
-                                    d'ailleurs d'homme de main, à épouser la fille d'un riche politicien. Malheureusement pour lui, tout 
-                                    ne pas se passer comme prévu...
-                                </p>
-                                <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="fermer les informations">
-                                    <img class="oeuvres__seemore--iconclose" src="../public/icons/card/white-cross.svg" alt="fermer les informations">
-                                </button>
+                    <div class="oeuvres__info">
+                        <div class="oeuvres__container oeuvres__container--quatre">
+                            <div class="oeuvres__card" :class="{flip:card4}">
+                                <div class="oeuvres__side oeuvres__side--front">
+                                    <img class="oeuvres__side--img" src="../public/img/articles/filmography/money_flower.webp" alt="Money Flower">
+                                </div>
+                                <div class="oeuvres__side oeuvres__side--back">
+                                    <p class="oeuvres__side--title">
+                                        "Money Flower"
+                                    </p>
+                                    <p class="oeuvres__side--infos">
+                                        Série sortie le 11 novembre 2017<br><br>
+                                        1 saison, 24 épisodes
+                                    </p>
+                                    <p class="oeuvres__side--resume">
+                                        Synopsis :<br><br>
+                                        Pour sauver son héritage familial, un puissant va contraindre son meilleur avocat, qui lui sert
+                                        d'ailleurs d'homme de main, à épouser la fille d'un riche politicien. Malheureusement pour lui, tout
+                                        ne pas se passer comme prévu...
+                                    </p>
+                                    <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="fermer les informations">
+                                        <img class="oeuvres__seemore--iconclose" src="../public/icons/card/white-cross.svg" alt="fermer les informations">
+                                    </button>
+                                </div>
                             </div>
                         </div>
+                        <p class="oeuvres__title">"Money Flower"</p>
+                        <button @click="card1 = false; card2 = false; card3 = false; card4 = ! card4; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="ouvrir les informations">
+                            <img class="oeuvres__seemore--icon" src="../public/icons/card/eye.svg" alt="ouvrir les informations">
+                        </button>
                     </div>
-                    <p class="oeuvres__title">"Money Flower"</p>
-                    <button @click="card1 = false; card2 = false; card3 = false; card4 = ! card4; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="ouvrir les informations">
-                        <img class="oeuvres__seemore--icon" src="../public/icons/card/eye.svg" alt="ouvrir les informations">
-                    </button>
-                </div>
-
-                <div class="oeuvres__info">
-                    <div class="oeuvres__container oeuvres__container--cinq">
-                        <div class="oeuvres__card" :class="{flip:card5}">
-                            <div class="oeuvres__side oeuvres__side--front">
-                                <img class="oeuvres__side--img" src="../public/img/articles/filmography/the_crowned_clown.webp" alt="The Crowned Clown">
-                            </div>
-                            <div class="oeuvres__side oeuvres__side--back">
-                                <p class="oeuvres__side--title">
-                                    "The Crowned Clown"
-                                </p>
-                                <p class="oeuvres__side--infos">
-                                    Série sortie le 7 janvier 2019<br><br>
-                                    1 saison, 16 épisodes
-                                </p>
-                                <p class="oeuvres__side--resume">
-                                    Synopsis :<br><br>
-                                    Pour échapper aux persécutions et aux réclamations du peuple, un roi met au pouvoir un « clown » 
-                                    lui ressemblant trait pour trait. Seulement, le clown va prendre son rôle très à cœur : il va ainsi se 
-                                    rapprocher de la reine et du peuple et va tout faire pour être le meilleur des souverains !
-                                </p>
-                                <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="fermer les informations">
-                                    <img class="oeuvres__seemore--iconclose" src="../public/icons/card/white-cross.svg" alt="fermer les informations">
-                                </button>
+                    <div class="oeuvres__info">
+                        <div class="oeuvres__container oeuvres__container--cinq">
+                            <div class="oeuvres__card" :class="{flip:card5}">
+                                <div class="oeuvres__side oeuvres__side--front">
+                                    <img class="oeuvres__side--img" src="../public/img/articles/filmography/the_crowned_clown.webp" alt="The Crowned Clown">
+                                </div>
+                                <div class="oeuvres__side oeuvres__side--back">
+                                    <p class="oeuvres__side--title">
+                                        "The Crowned Clown"
+                                    </p>
+                                    <p class="oeuvres__side--infos">
+                                        Série sortie le 7 janvier 2019<br><br>
+                                        1 saison, 16 épisodes
+                                    </p>
+                                    <p class="oeuvres__side--resume">
+                                        Synopsis :<br><br>
+                                        Pour échapper aux persécutions et aux réclamations du peuple, un roi met au pouvoir un « clown »
+                                        lui ressemblant trait pour trait. Seulement, le clown va prendre son rôle très à cœur : il va ainsi se
+                                        rapprocher de la reine et du peuple et va tout faire pour être le meilleur des souverains !
+                                    </p>
+                                    <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="fermer les informations">
+                                        <img class="oeuvres__seemore--iconclose" src="../public/icons/card/white-cross.svg" alt="fermer les informations">
+                                    </button>
+                                </div>
                             </div>
                         </div>
+                        <p class="oeuvres__title">"The Crowned Clown"</p>
+                        <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = ! card5; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="ouvrir les informations">
+                            <img class="oeuvres__seemore--icon" src="../public/icons/card/eye.svg" alt="ouvrir les informations">
+                        </button>
                     </div>
-                    <p class="oeuvres__title">"The Crowned Clown"</p>
-                    <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = ! card5; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="ouvrir les informations">
-                        <img class="oeuvres__seemore--icon" src="../public/icons/card/eye.svg" alt="ouvrir les informations">
-                    </button>
-                </div>
-
-                <div class="oeuvres__info">
-                    <div class="oeuvres__container oeuvres__container--six">
-                        <div class="oeuvres__card" :class="{flip:card6}">
-                            <div class="oeuvres__side oeuvres__side--front">
-                                <img class="oeuvres__side--img" src="../public/img/articles/filmography/vincenzo.webp" alt="Vincenzo">
-                            </div>
-                            <div class="oeuvres__side oeuvres__side--back">
-                                <p class="oeuvres__side--title">
-                                    "Vincenzo"
-                                </p>
-                                <div class="oeuvres__side--linkbox"><a class="oeuvres__side--link button" href="./serie.html">Lien vers l'article</a></div>
-                                <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="fermer les informations">
-                                    <img class="oeuvres__seemore--iconclose" src="../public/icons/card/white-cross.svg" alt="fermer les informations">
-                                </button>
+                    <div class="oeuvres__info">
+                        <div class="oeuvres__container oeuvres__container--six">
+                            <div class="oeuvres__card" :class="{flip:card6}">
+                                <div class="oeuvres__side oeuvres__side--front">
+                                    <img class="oeuvres__side--img" src="../public/img/articles/filmography/vincenzo.webp" alt="Vincenzo">
+                                </div>
+                                <div class="oeuvres__side oeuvres__side--back">
+                                    <p class="oeuvres__side--title">
+                                        "Vincenzo"
+                                    </p>
+                                    <div class="oeuvres__side--linkbox"><a class="oeuvres__side--link button" href="./serie.html">Lien vers l'article</a></div>
+                                    <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="fermer les informations">
+                                        <img class="oeuvres__seemore--iconclose" src="../public/icons/card/white-cross.svg" alt="fermer les informations">
+                                    </button>
+                                </div>
                             </div>
                         </div>
+                        <p class="oeuvres__title">"Vincenzo"</p>
+                        <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = false; card6 = ! card6; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="ouvrir les informations">
+                            <img class="oeuvres__seemore--icon" src="../public/icons/card/eye.svg" alt="ouvrir les informations">
+                        </button>
                     </div>
-                    <p class="oeuvres__title">"Vincenzo"</p>
-                    <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = false; card6 = ! card6; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="ouvrir les informations">
-                        <img class="oeuvres__seemore--icon" src="../public/icons/card/eye.svg" alt="ouvrir les informations">
-                    </button>
-                </div>
-
-                <div class="oeuvres__info">
-                    <div class="oeuvres__container oeuvres__container--sept">
-                        <div class="oeuvres__card" :class="{flip:card7}">
-                            <div class="oeuvres__side oeuvres__side--front">
-                                <img class="oeuvres__side--img" src="../public/img/articles/filmography/soundtrack_no_1.webp" alt="Soundtrack No.1">
-                            </div>
-                            <div class="oeuvres__side oeuvres__side--back">
-                                <p class="oeuvres__side--title">
-                                    "Soundtrack No.1"
-                                </p>
-                                <p class="oeuvres__side--infos">
-                                    Série sortie le 23 mars 2022<br><br>
-                                    1 saison, 4 épisodes
-                                </p>
-                                <p class="oeuvres__side--resume">
-                                    Synopsis :<br><br>
-                                    Après longtemps sans s'être vus, deux amis se retrouvent dans la même maison pendant deux 
-                                    semaines. Plus que des retrouvailles, c'est une vraie relation qui se tisse...
-                                </p>
-                                <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="fermer les informations">
-                                    <img class="oeuvres__seemore--iconclose" src="../public/icons/card/white-cross.svg" alt="fermer les informations">
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="oeuvres__title">"Soundtrack No.1"</p>
-                    <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = false; card6 = false; card7 = ! card7; card8 = false" class="oeuvres__seemore" aria-label="ouvrir les informations">
-                        <img class="oeuvres__seemore--icon" src="../public/icons/card/eye.svg" alt="ouvrir les informations">
-                    </button>
-                </div>
-
-                <div class="oeuvres__info">
-                    <div class="oeuvres__container oeuvres__container--huit">
-                        <div class="oeuvres__card" :class="{flip:card8}">
-                            <div class="oeuvres__side oeuvres__side--front">
-                                <img class="oeuvres__side--img" src="../public/img/articles/filmography/little_women.webp" alt="Little Women">
-                            </div>
-                            <div class="oeuvres__side oeuvres__side--back">
-                                <p class="oeuvres__side--title">
-                                    "Little Women"
-                                </p>
-                                <p class="oeuvres__side--infos">
-                                    Série sortie le 3 septembre 2022<br><br>
-                                    1 saison, 12 épisodes
-                                </p>
-                                <p class="oeuvres__side--resume">
-                                    Synopsis :<br><br>
-                                    Trois sœurs démunies se retrouvent à la merci d'une puissante famille coréenne.
-                                </p>
-                                <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="fermer les informations">
-                                    <img class="oeuvres__seemore--iconclose" src="../public/icons/card/white-cross.svg" alt="fermer les informations">
-                                </button>
+                    <div class="oeuvres__info">
+                        <div class="oeuvres__container oeuvres__container--sept">
+                            <div class="oeuvres__card" :class="{flip:card7}">
+                                <div class="oeuvres__side oeuvres__side--front">
+                                    <img class="oeuvres__side--img" src="../public/img/articles/filmography/soundtrack_no_1.webp" alt="Soundtrack No.1">
+                                </div>
+                                <div class="oeuvres__side oeuvres__side--back">
+                                    <p class="oeuvres__side--title">
+                                        "Soundtrack No.1"
+                                    </p>
+                                    <p class="oeuvres__side--infos">
+                                        Série sortie le 23 mars 2022<br><br>
+                                        1 saison, 4 épisodes
+                                    </p>
+                                    <p class="oeuvres__side--resume">
+                                        Synopsis :<br><br>
+                                        Après longtemps sans s'être vus, deux amis se retrouvent dans la même maison pendant deux
+                                        semaines. Plus que des retrouvailles, c'est une vraie relation qui se tisse...
+                                    </p>
+                                    <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="fermer les informations">
+                                        <img class="oeuvres__seemore--iconclose" src="../public/icons/card/white-cross.svg" alt="fermer les informations">
+                                    </button>
+                                </div>
                             </div>
                         </div>
+                        <p class="oeuvres__title">"Soundtrack No.1"</p>
+                        <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = false; card6 = false; card7 = ! card7; card8 = false" class="oeuvres__seemore" aria-label="ouvrir les informations">
+                            <img class="oeuvres__seemore--icon" src="../public/icons/card/eye.svg" alt="ouvrir les informations">
+                        </button>
                     </div>
-                    <p class="oeuvres__title">"Little Women"</p>
-                    <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = false; card6 = false; card7 = false; card8 = ! card8" class="oeuvres__seemore" aria-label="ouvrir les informations">
-                        <img class="oeuvres__seemore--icon" src="../public/icons/card/eye.svg" alt="ouvrir les informations">
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <div class="article__line--brightbig"></div>
-
-    </article>
-
-    <div class="article__nextarticle nextarticle">
-        <a class="nextarticle__link" href="./musique.html">
-            <div class="nextarticle__component">
-                <div class="nextarticle__side nextarticle__side--left">
-                    <div class="nextarticle__circles circles circles--cornerright">
-                        <div class="circle circle--xs article__bg--saumon"></div>
-                        <div class="circle circle--xm article__bg--saumon"></div>
+                    <div class="oeuvres__info">
+                        <div class="oeuvres__container oeuvres__container--huit">
+                            <div class="oeuvres__card" :class="{flip:card8}">
+                                <div class="oeuvres__side oeuvres__side--front">
+                                    <img class="oeuvres__side--img" src="../public/img/articles/filmography/little_women.webp" alt="Little Women">
+                                </div>
+                                <div class="oeuvres__side oeuvres__side--back">
+                                    <p class="oeuvres__side--title">
+                                        "Little Women"
+                                    </p>
+                                    <p class="oeuvres__side--infos">
+                                        Série sortie le 3 septembre 2022<br><br>
+                                        1 saison, 12 épisodes
+                                    </p>
+                                    <p class="oeuvres__side--resume">
+                                        Synopsis :<br><br>
+                                        Trois sœurs démunies se retrouvent à la merci d'une puissante famille coréenne.
+                                    </p>
+                                    <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = false; card6 = false; card7 = false; card8 = false" class="oeuvres__seemore" aria-label="fermer les informations">
+                                        <img class="oeuvres__seemore--iconclose" src="../public/icons/card/white-cross.svg" alt="fermer les informations">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="oeuvres__title">"Little Women"</p>
+                        <button @click="card1 = false; card2 = false; card3 = false; card4 = false; card5 = false; card6 = false; card7 = false; card8 = ! card8" class="oeuvres__seemore" aria-label="ouvrir les informations">
+                            <img class="oeuvres__seemore--icon" src="../public/icons/card/eye.svg" alt="ouvrir les informations">
+                        </button>
                     </div>
-                    <p class="nextarticle__title">
-                        Article suivant
-                    </p>
-                    <p class="nextarticle__text">
-                        "Egoist"<br>Une musique d'Olivia Hye
-                    </p>
                 </div>
-                <div class="nextarticle__side nextarticle__side--right">
-                    <img class="nextarticle__cover nextarticle__cover--music" src="../public/img/articles/series/egoist_album.webp" alt="article musique">
+            </section>
+            <div class="article__line--brightbig"></div>
+        </article>
+        <div class="article__nextarticle nextarticle">
+            <a class="nextarticle__link" href="./musique.html">
+                <div class="nextarticle__component">
+                    <div class="nextarticle__side nextarticle__side--left">
+                        <div class="nextarticle__circles circles circles--cornerright">
+                            <div class="circle circle--xs article__bg--saumon"></div>
+                            <div class="circle circle--xm article__bg--saumon"></div>
+                        </div>
+                        <p class="nextarticle__title">
+                            Article suivant
+                        </p>
+                        <p class="nextarticle__text">
+                            "Egoist"<br>Une musique d'Olivia Hye
+                        </p>
+                    </div>
+                    <div class="nextarticle__side nextarticle__side--right">
+                        <img class="nextarticle__cover nextarticle__cover--music" src="../public/img/articles/series/egoist_album.webp" alt="article musique">
+                    </div>
                 </div>
-            </div>
-        </a>
-    </div>
-
-    <div class="tothetop">
-        <a class="tothetop__img--link" href="#">
-            <img class="tothetop__img" src="../public/icons/up-arrow.svg" alt="go to the top of the page">
-        </a>
-    </div>
+            </a>
+        </div>
+        <div class="tothetop">
+            <a class="tothetop__img--link" href="#">
+                <img class="tothetop__img" src="../public/icons/up-arrow.svg" alt="go to the top of the page">
+            </a>
+        </div>
+    </main>
 
     <footer class="footer">
         <p class="footer__name">Léopold OHNIMUS GR-B2</p>
