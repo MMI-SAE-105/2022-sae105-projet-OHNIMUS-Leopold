@@ -218,6 +218,34 @@ mark {
 
 } */
 
+.projects {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.projects__head {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.projects__title {
+    margin-bottom: 20px;
+}
+
+/* .projects__text {
+
+} */
+
+.projects__content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .projects__link {
+
+} */
+
 .bg--saumon {
     background-color: var(--saumon);
 }
