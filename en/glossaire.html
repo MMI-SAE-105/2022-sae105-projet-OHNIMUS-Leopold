@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../public/icons/Logo.webp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossaire</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Import de la fonction de recherche -->
+    <script src="../src/js/script.js" defer></script>
+</head>
+<body x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+    
+    <header class="header">
+        <a href="./index.html"><img class="header__logo" src="../public/icons/logo.webp" alt="logo du site"></a>
+        <p class="header__title">Korean Notes</p>
+        <div class="header__menu menu">
+            <button aria-controls="mainMenu" class="menu__icon--button" @click="menuIsOpen = ! menuIsOpen"><img class="menu__icon" src="../public/icons/menu/menu.svg" alt="ouvrir menu"></button>
+            
+            <div id="mainMenu" class="menu__open" x-show="menuIsOpen" x-data="{articlesAreOpen: false, othersAreOpen: false}">
+                
+                <div class="menu__header">
+                    <img class="menu__lang" src="../public/icons/menu/globe.svg" alt="changer de langue">
+                    <p class="menu__title">Menu</p>
+                    <button aria-controls="mainMenu" class="menu__close--button" @click="menuIsOpen = ! menuIsOpen"><img class="menu__close" src="../public/icons/menu/black-cross.svg" alt="fermer menu"></button>
+                </div>
+
+                <span class="menu__bar"></span>
+                
+                <nav class="menu__nav">
+                    <ul class="menu__section"><button aria-controls="navArticles" @click="articlesAreOpen = ! articlesAreOpen; othersAreOpen = false" class="menu__section--button">Mes articles</button>
+                        <div id="navArticles" class="menu__list" x-show="articlesAreOpen" x-transition.duration.200ms>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./lieu.html">Temple Haedong Yonggungsa</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./livre.html">"Corées, Enfin la paix ?" Un regard sur les femmes de réconfort</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./espoir.html">Une société sud-coréenne de moins en moins patriarcale et qui s'ouvre au monde</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./serie.html">Une série remarquable "Vincenzo"</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./musique.html">"Egoist" Une musique d'Olivia Hye</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./regret.html">Un de mes grands regrets La pollution générée par l'industrie de la K-POP</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./glossaire.html">Glossaire</a>
+                            </li>
+                        </div>
+                    </ul>
+                    <ul class="menu__section"><button aria-controls="navOthers" @click="othersAreOpen = ! othersAreOpen; articlesAreOpen = false" class="menu__section--button">Voir plus</button>
+                        <div id="navOthers" class="menu__list" x-show="othersAreOpen" x-transition.duration.200ms>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./apropos.html">À propos</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./contact.html">Contact</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./projets.html">Autres projets</a>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+
+                <div class="menu__footer">
+                    <span class="menu__circle"></span>
+                    <span class="menu__circle"></span>
+                    <span class="menu__circle"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="glossary">
+            <h1 class="glossary__title">Glossaire</h1>
+            <p class="glossary__desc">Pour des définitions, c'est ici !<br>Recherchez simplement votre mot et scrollez !</p>
+            <div class="glossary__searchbox searchbox">
+                <input id="text-to-search" oninput="search()" class="searchbox__bar" type="text" placeholder="Recherche..." aria-label="Recherche">
+                <button onclick="search()" class="searchbox__button" aria-controls="text-to-search">
+                    <img class="searchbox__button--icon" src="../public/icons/search.svg" alt="search icon">
+                </button>
+            </div>
+            <p class="glossary__copyrights">Définitions de <a class="glossary__copyrights--link" href="https://www.larousse.fr/">larousse.fr</a></p>
+        </section>
+        <dl class="definition">
+            <dt class="definition--title">
+                Bouddha
+            </dt>
+            <dd class="definition--desc">
+                Dans le bouddhisme, celui qui, ayant surmonté tous les désirs, s'éveille à la connaissance parfaite (bodhi) de la vérité et se libère de toute action.
+            </dd>
+        
+            <dt class="definition--title">
+                Consiglière
+            </dt>
+            <dd class="definition--desc">
+                Personne la plus haute placée dans la mafia, se trouvant juste en dessous du chef direct.
+            </dd>
+        
+            <dt class="definition--title">
+                Drama
+            </dt>
+            <dd class="definition--desc">
+                Genre de série. Désignant à la base le genre du drame, ce terme a été généralisé pour parler de séries où une histoire d'amour est présente.
+            </dd>
+        
+            <dt class="definition--title">
+                kDrama
+            </dt>
+            <dd class="definition--desc">
+                Drama coréen.
+            </dd>
+        
+            <dt class="definition--title">
+                Femme de réconfort
+            </dt>
+            <dd class="definition--desc">
+                Le terme de « femmes de réconfort » désigne les jeunes filles raflées par l'armée impériale japonaise pour servir de prostituées en Corée mais aussi en Chine et en Asie du Sud-Est durant la guerre d'Asie-Pacifique (1931-1945).
+            </dd>
+        
+            <dt class="definition--title">
+                K-POP
+            </dt>
+            <dd class="definition--desc">
+                Genre musical très codifié apparu en Corée du Sud au début des années 1990, issu de plusieurs courants (pop, électro, hip-hop, rock, etc.), caractérisé par des chansons aux rythmes entraînants interprétées par des groupes de filles ou de garçons aux tenues excentriques sur des chorégraphies particulièrement soignées.
+            </dd>
+        
+            <dt class="definition--title">
+                Mafia
+            </dt>
+            <dd class="definition--desc">
+                Bande ou association secrète de malfaiteurs.
+            </dd>
+        
+            <dt class="definition--title">
+                Négationnisme
+            </dt>
+            <dd class="definition--desc">
+                Doctrine niant la réalité du génocide des Juifs par les nazis, notamment l'existence des chambres à gaz.<br>(Le terme de négationnisme s'emploie, par extension, à propos d'autres génocides ou de certains massacres à grande échelle.)
+            </dd>
+        
+            <dt class="definition--title">
+                Néo-confucéen
+            </dt>
+            <dd class="definition--desc">
+                Le néoconfucianisme est un courant philosophique extrême-oriental qui prit son essor sous la dynastie chinoise Song et devint la version officielle du confucianisme du XIVᵉ siècle jusqu'au tout début du XXᵉ siècle, malgré la concurrence du courant Hanxue à partir de la dynastie Qing.
+            </dd>
+        
+            <dt class="definition--title">
+                Pagode
+            </dt>
+            <dd class="definition--desc">
+                Édifice religieux, issu du stupa indien, consacré au culte du Bouddha en Extrême-Orient.
+            </dd>
+        
+            <dt class="definition--title">
+                Patriarcat
+            </dt>
+            <dd class="definition--desc">
+                Forme d'organisation sociale dans laquelle l'homme exerce le pouvoir dans le domaine politique, économique, religieux, ou détient le rôle dominant au sein de la famille, par rapport à la femme.
+            </dd>
+        
+            <dt class="definition--title">
+                PDG
+            </dt>
+            <dd class="definition--desc">
+                Sigle de Président-Directeur Général.
+            </dd>
+        
+        </dl>
+        <div class="tothetop">
+            <a class="tothetop__img--link" href="#">
+                <img class="tothetop__img" src="../public/icons/up-arrow.svg" alt="go to the top of the page">
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__name">Léopold OHNIMUS GR-B2</p>
+        <span class="footer__bar"></span>
+        <a class="footer__mail" href="mailto:leopold.ohnimus02@orange.fr">leopold.ohnimus02@orange.fr</a>
+        <div class="footer__options">
+            <a class="footer__link button" href="./apropos.html">À propos</a>
+            <a class="footer__link button" href="./contact.html">Contact</a>
+        </div>
+        <p class="footer__legal">
+            Projet réalisé dans le cadre d'un exercice pédagogique au
+            <a class="footer__legal--link" href="http://mmimontbeliard.com/">Département MMI de Montbéliard</a>.
+        </p>
+    </footer>
+
+</body>
+</html>

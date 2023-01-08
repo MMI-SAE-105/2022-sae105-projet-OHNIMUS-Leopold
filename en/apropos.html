@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../public/icons/Logo.webp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+    
+    <header class="header">
+        <a href="./index.html"><img class="header__logo" src="../public/icons/logo.webp" alt="logo du site"></a>
+        <p class="header__title">Korean Notes</p>
+        <div class="header__menu menu">
+            <button aria-controls="mainMenu" class="menu__icon--button" @click="menuIsOpen = ! menuIsOpen"><img class="menu__icon" src="../public/icons/menu/menu.svg" alt="ouvrir menu"></button>
+            
+            <div id="mainMenu" class="menu__open" x-show="menuIsOpen" x-data="{articlesAreOpen: false, othersAreOpen: false}">
+                
+                <div class="menu__header">
+                    <img class="menu__lang" src="../public/icons/menu/globe.svg" alt="changer de langue">
+                    <p class="menu__title">Menu</p>
+                    <button aria-controls="mainMenu" class="menu__close--button" @click="menuIsOpen = ! menuIsOpen"><img class="menu__close" src="../public/icons/menu/black-cross.svg" alt="fermer menu"></button>
+                </div>
+
+                <span class="menu__bar"></span>
+                
+                <nav class="menu__nav">
+                    <ul class="menu__section"><button aria-controls="navArticles" @click="articlesAreOpen = ! articlesAreOpen; othersAreOpen = false" class="menu__section--button">Mes articles</button>
+                        <div id="navArticles" class="menu__list" x-show="articlesAreOpen" x-transition.duration.200ms>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./lieu.html">Temple Haedong Yonggungsa</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./livre.html">"Corées, Enfin la paix ?" Un regard sur les femmes de réconfort</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./espoir.html">Une société sud-coréenne de moins en moins patriarcale et qui s'ouvre au monde</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./serie.html">Une série remarquable "Vincenzo"</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./musique.html">"Egoist" Une musique d'Olivia Hye</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./regret.html">Un de mes grands regrets La pollution générée par l'industrie de la K-POP</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./glossaire.html">Glossaire</a>
+                            </li>
+                        </div>
+                    </ul>
+                    <ul class="menu__section"><button aria-controls="navOthers" @click="othersAreOpen = ! othersAreOpen; articlesAreOpen = false" class="menu__section--button">Voir plus</button>
+                        <div id="navOthers" class="menu__list" x-show="othersAreOpen" x-transition.duration.200ms>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./apropos.html">À propos</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./contact.html">Contact</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./projets.html">Autres projets</a>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+
+                <div class="menu__footer">
+                    <span class="menu__circle"></span>
+                    <span class="menu__circle"></span>
+                    <span class="menu__circle"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="about">
+
+        <section class="about__start">
+            <div class="about__circles circles circles--cornerleft">
+                <div class="circle circle--xxl bg--saumon"></div>
+                <div class="circle circle--m bg--saumon"></div>
+            </div>
+
+            <h1 class="about__title">À propos</h1>
+            <img class="about__img" src="../public/img/about/tete.webp" alt="Léopold OHNIMUS">
+            <h2 class="about__subtitle">Mes réseaux</h2>
+            <a class="about__link" href="https://portfolio.leopold-ohnimus.fr/">https://portfolio.leopold-ohnimus.fr/</a>
+        </section>
+
+        <div class="about__content">
+            <p class="about__text">
+                Bonjour, je m'appelle Léopold OHNIMUS. Je suis étudiant en première année à l'IUT de Belfort-Montbéliard.
+            </p>
+            <p class="about__text">
+                Pour mon projet de S1, je devais réaliser un site mobile first en présentant, un peu comme le fait 
+                Orelsan dans sa musique "Notes pour trop tard", plusieurs éléments à mon "moi" du futur qui sont : 
+                un lieu, un livre, un film, une musique, un regret et un espoir de ma génération.
+            </p>
+            <p class="about__text">
+                Étant un grand passionné de la Corée et de sa culture, J'ai pu regrouper tous mes éléments sous 
+                cette thématique. Ce site aura donc pour but de laisser une trace de mes passions et de mon vécu au 
+                moment de ma vingtaine, tout en faisant découvrir à d'autres passionnés les éléments que j'y ai 
+                retenu.
+            </p>
+        </div>
+
+        <div class="about__end">
+            <div class="about__line about__line--tright"></div>
+            <p class="about__text--end">N'hésitez pas à me contacter !</p>
+            <div class="about__line about__line--bleft"></div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer__name">Léopold OHNIMUS GR-B2</p>
+        <span class="footer__bar"></span>
+        <a class="footer__mail" href="mailto:leopold.ohnimus02@orange.fr">leopold.ohnimus02@orange.fr</a>
+        <div class="footer__options">
+            <a class="footer__link button" href="./apropos.html">À propos</a>
+            <a class="footer__link button" href="./contact.html">Contact</a>
+        </div>
+        <p class="footer__legal">
+            Projet réalisé dans le cadre d'un exercice pédagogique au
+            <a class="footer__legal--link" href="http://mmimontbeliard.com/">Département MMI de Montbéliard</a>.
+        </p>
+    </footer>
+
+</body>
+</html>

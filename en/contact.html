@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../public/icons/Logo.webp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+    
+    <header class="header">
+        <a href="./index.html"><img class="header__logo" src="../public/icons/logo.webp" alt="logo du site"></a>
+        <p class="header__title">Korean Notes</p>
+        <div class="header__menu menu">
+            <button aria-controls="mainMenu" class="menu__icon--button" @click="menuIsOpen = ! menuIsOpen"><img class="menu__icon" src="../public/icons/menu/menu.svg" alt="ouvrir menu"></button>
+            
+            <div id="mainMenu" class="menu__open" x-show="menuIsOpen" x-data="{articlesAreOpen: false, othersAreOpen: false}">
+                
+                <div class="menu__header">
+                    <img class="menu__lang" src="../public/icons/menu/globe.svg" alt="changer de langue">
+                    <p class="menu__title">Menu</p>
+                    <button aria-controls="mainMenu" class="menu__close--button" @click="menuIsOpen = ! menuIsOpen"><img class="menu__close" src="../public/icons/menu/black-cross.svg" alt="fermer menu"></button>
+                </div>
+
+                <span class="menu__bar"></span>
+                
+                <nav class="menu__nav">
+                    <ul class="menu__section"><button aria-controls="navArticles" @click="articlesAreOpen = ! articlesAreOpen; othersAreOpen = false" class="menu__section--button">Mes articles</button>
+                        <div id="navArticles" class="menu__list" x-show="articlesAreOpen" x-transition.duration.200ms>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./lieu.html">Temple Haedong Yonggungsa</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./livre.html">"Corées, Enfin la paix ?" Un regard sur les femmes de réconfort</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./espoir.html">Une société sud-coréenne de moins en moins patriarcale et qui s'ouvre au monde</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./serie.html">Une série remarquable "Vincenzo"</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./musique.html">"Egoist" Une musique d'Olivia Hye</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./regret.html">Un de mes grands regrets La pollution générée par l'industrie de la K-POP</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./glossaire.html">Glossaire</a>
+                            </li>
+                        </div>
+                    </ul>
+                    <ul class="menu__section"><button aria-controls="navOthers" @click="othersAreOpen = ! othersAreOpen; articlesAreOpen = false" class="menu__section--button">Voir plus</button>
+                        <div id="navOthers" class="menu__list" x-show="othersAreOpen" x-transition.duration.200ms>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./apropos.html">À propos</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./contact.html">Contact</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="menu__bullet" src="../public/icons/carrousel/chevron-right.svg" alt="puce">
+                                <a class="menu__link" href="./projets.html">Autres projets</a>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+
+                <div class="menu__footer">
+                    <span class="menu__circle"></span>
+                    <span class="menu__circle"></span>
+                    <span class="menu__circle"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="contact">
+        <div class="contact__start">
+            <div class="contact__circles circles circles--cornerright">
+                <div class="circle circle--m bg--blue"></div>
+                <div class="circle circle--xxl bg--blue"></div>
+            </div>
+            <h1 class="contact__title">
+                Contact
+            </h1>
+            <p class="contact__text">
+                Si vous avez une question par rapport à ce projet ou par rapport à moi, vous pouvez me contacter via 
+                ce formulaire :
+            </p>
+            <form id="contactForm" class="contact__form form">
+                <input class="form__input" type="text" placeholder="Votre nom" name="last-name" id="last-name">
+                <input class="form__input" type="email" placeholder="Votre adresse mail" name="email" id="email">
+                <textarea class="form__txtarea" placeholder="Votre message" name="message" id="message"></textarea>
+                <button aria-controls="contactForm" class="form__button button" type="submit">Envoyer</button>
+            </form>
+        </div>
+        <div class="contact__end">
+            <div class="contact__line contact__line--tright bg--saumon"></div>
+            <p class="contact__text--end">N'hésitez pas à visiter ma page à propos !</p>
+            <div class="contact__line contact__line--bleft bg--saumon"></div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__name">Léopold OHNIMUS GR-B2</p>
+        <span class="footer__bar"></span>
+        <a class="footer__mail" href="mailto:leopold.ohnimus02@orange.fr">leopold.ohnimus02@orange.fr</a>
+        <div class="footer__options">
+            <a class="footer__link button" href="./apropos.html">À propos</a>
+            <a class="footer__link button" href="./contact.html">Contact</a>
+        </div>
+        <p class="footer__legal">
+            Projet réalisé dans le cadre d'un exercice pédagogique au
+            <a class="footer__legal--link" href="http://mmimontbeliard.com/">Département MMI de Montbéliard</a>.
+        </p>
+    </footer>
+</body>
+</html>
