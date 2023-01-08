@@ -152,6 +152,45 @@ mark {
     margin: 0;
 }
 
+.about__content {
+    background-color: var(--noir-nuit);
+    padding: 20px 20px 0 20px;
+    margin-top: 30px;
+}
+
+.about__text {
+    color: var(--jaune);
+    padding-bottom: 20px;
+}
+
+/* .about__end {
+
+} */
+
+.about__line {
+    height: 10px;
+    background-color: var(--bleu);
+}
+
+.about__line--tright {
+    width: 40%;
+    /* margin-bottom: 10px; */
+    margin-top: -20px;
+    position: absolute;
+    right: 0;
+}
+
+.about__line--bleft {
+    width: 26%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.about__text--end {
+    text-align: center;
+    margin-top: 50px;
+}
+
 .bg--saumon {
     background-color: var(--saumon);
 }
