@@ -116,3 +116,46 @@ mark {
 /* .list__option {
 
 } */
+
+/* .about {
+
+} */
+
+.about__start {
+    text-align: center;
+}
+
+/* .about__circles {
+
+} */
+
+.about__title {
+    margin-top: -25px;
+}
+
+.about__img {
+    width: 206px;
+    max-width: 412px;
+    border-radius: 50%;
+    margin: 10px 0 20px 0;
+}
+
+/* .about__subtitle {
+
+} */
+
+.about__link {
+    font-family: var(--sans-serif);
+    font-size: var(--small-text);
+    font-weight: var(--regular);
+    color: var(--noir-nuit);
+    margin: 0;
+}
+
+.bg--saumon {
+    background-color: var(--saumon);
+}
+
+.bg--blue {
+    background-color: var(--bleu);
+}

@@ -43,6 +43,12 @@
     /* padding: 5px 18px 0 0; */
 }
 
+.circles--cornerleft {
+    display: flex;
+    justify-content: start;
+    margin-top: 18px;
+}
+
 .circles--harmonized {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -131,4 +137,12 @@
 .circle--xl {
     height: 25px;
     width: 25px;
+}
+
+.circle--xxl {
+    height: 30px;
+    width: 30px;
+    margin-right: -5px;
+    margin-left: 10px;
+    margin-top: 7px;
 }
