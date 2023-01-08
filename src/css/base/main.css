@@ -163,16 +163,16 @@ mark {
     padding-bottom: 20px;
 }
 
-/* .about__end {
+/* .about__end, .contact__end {
 
 } */
 
-.about__line {
+.about__line, .contact__line {
     height: 10px;
     background-color: var(--bleu);
 }
 
-.about__line--tright {
+.about__line--tright, .contact__line--tright {
     width: 40%;
     /* margin-bottom: 10px; */
     margin-top: -20px;
@@ -180,16 +180,41 @@ mark {
     right: 0;
 }
 
-.about__line--bleft {
+.about__line--bleft, .contact__line--bleft {
     width: 26%;
     margin-top: 10px;
     margin-bottom: 30px;
 }
 
-.about__text--end {
+.about__text--end, .contact__text--end {
     text-align: center;
     margin-top: 50px;
 }
+
+/* .contact {
+
+} */
+
+/* .contact__start {
+
+} */
+
+/* .contact__circles {
+
+} */
+
+.contact__title {
+    text-align: center;
+}
+
+.contact__text {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* .contact__form {
+
+} */
 
 .bg--saumon {
     background-color: var(--saumon);

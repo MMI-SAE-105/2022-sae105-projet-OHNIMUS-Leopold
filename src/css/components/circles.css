@@ -101,6 +101,11 @@
     margin-right: 6px;
 }
 
+.contact__start > .circles--cornerright {
+    margin-right: 20px;
+    margin-top: 8px;
+}
+
 .circle {
     border-radius: 50%;
 }
